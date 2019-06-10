@@ -17,7 +17,6 @@ $(function() {
     }
     x[myIndex - 1].style.display = "block";
 
-    $("mySkides").fadeIn(500);
     setTimeout(carousel, 5000);
   }
 
