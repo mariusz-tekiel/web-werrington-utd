@@ -117,6 +117,7 @@ header h1 {
 }
 
 header .mySlides {
+  transition: width 2s, height 4s;
   display: none;
 }
 
