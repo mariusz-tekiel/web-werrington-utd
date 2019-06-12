@@ -142,7 +142,8 @@
         <div class="row"> 
           <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">
               <h1>CLUB</h1>
-                   
+                   <?php phpinfo();
+                    ?>
    
               <p>The Werrington United Team was founded in 2012 by a group of friends in Peterborough. Initially, it was
                   just a pleasant
@@ -169,6 +170,30 @@
         </div>
       <h1 class="text-center mb-3">LEAGUE TABLE       
       </h1>
+       <div>
+           <?php
+        session_start();
+        require_once "dbconnect.php";
+       $mysqli = new mysqli($host, $dblogin, $dbhaslo, $database);
+        if($mysqli->connect_errno!=0)
+        {
+            echo "ERROR: ".$mysqli->connect_errno;
+        }else 
+        {  
+            $wynik = $mysqli->query("SELECT logo FROM tabela");
+            while($wiersz = $wynik->fetch_assoc()) {
+               if($wiersz['logo'] == true){
+                echo ' <a href="info.php"><img span style="padding:0.5em; max-height:500px;" src="data:image/gif;base64,' . $wiersz['logo']  . '"/></a>';
+     
+                //tu powinno nastąpić jeszcze przypisanie $wiersz['logo'] do zmiennej sesyjnej
+     
+     
+            }
+    }
+    }
+        $mysqli->close();
+    ?></div> 
+
       <div>
         <br>
         <br>
