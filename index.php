@@ -95,7 +95,6 @@
       </div>
     </div>
   </nav>
-
   <!-- Header section -->
     <header id="header">
       <div class="mySlides">
@@ -143,7 +142,8 @@
         <div class="row"> 
           <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">
               <h1>CLUB</h1>
-                         
+                   
+   
               <p>The Werrington United Team was founded in 2012 by a group of friends in Peterborough. Initially, it was
                   just a pleasant
                   form of spending free time. In 2014, Werrington Utd team played for the first time in the Cambridgeshire
