@@ -142,9 +142,7 @@
         <div class="row"> 
           <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">
               <h1>CLUB</h1>
-                   <?php phpinfo();
-                    ?>
-   
+                      
               <p>The Werrington United Team was founded in 2012 by a group of friends in Peterborough. Initially, it was
                   just a pleasant
                   form of spending free time. In 2014, Werrington Utd team played for the first time in the Cambridgeshire
@@ -172,27 +170,27 @@
       </h1>
        <div>
            <?php
-        session_start();
-        require_once "dbconnect.php";
-       $mysqli = new mysqli($host, $dblogin, $dbhaslo, $database);
-        if($mysqli->connect_errno!=0)
-        {
-            echo "ERROR: ".$mysqli->connect_errno;
-        }else 
-        {  
-            $wynik = $mysqli->query("SELECT logo FROM tabela");
-            while($wiersz = $wynik->fetch_assoc()) {
-               if($wiersz['logo'] == true){
-                echo ' <a href="info.php"><img span style="padding:0.5em; max-height:500px;" src="data:image/gif;base64,' . $wiersz['logo']  . '"/></a>';
-     
-                //tu powinno nastąpić jeszcze przypisanie $wiersz['logo'] do zmiennej sesyjnej
-     
-     
+            $con = mysql_connect("localhost","root","","werrington");
+            if (!$con)
+            {
+            die('Could not connect: ' . mysql_error());
             }
-    }
-    }
-        $mysqli->close();
-    ?></div> 
+            
+            mysql_select_db("werrington", $con);
+            
+            $result = mysql_query("SELECT match_id,date,team_id FROM matches");
+            echo $result;
+            
+            echo "<tr><td>$row['match_id']</td><td>$row['date']</td><td>$row['team_id']</td></tr>";
+            while($row = mysql_fetch_array($result)) {
+                echo "<tr><td>$row['match_id']</td><td>$row['date']</td><td>$row['team_id']</td></tr>";
+            }
+            echo '</table>';
+            
+            mysql_close($con);
+          ?>
+
+        </div> 
 
       <div>
         <br>
