@@ -146,11 +146,49 @@
         <div class="row"> 
           <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">
               <h1>CLUB</h1>
-<<<<<<< HEAD
-                         
-=======
-                      
->>>>>>> FixSlides
+          <?php 
+            /* 
+              połączenie z bazą sobie darujemy 
+              opisane jest ono w tej poradzie 
+              http://www.kess.com.pl/?sid=10&pid=32 
+            */ 
+            $servername = "localhost";
+            $username = "";
+            $password = "";
+            $dbname = "werrington";
+//  create connection
+              $conn = new mysqli($servername,$username,$password,$dbname);
+              //check connection
+              if ($conn->connect_error){
+                die("Connection failed: ". $conn->connect_error);
+              } 
+
+            /* zapytanie do konkretnej tabeli */ 
+            $wynik = mysql_query("SELECT * FROM matches") 
+            or die('Błąd zapytania'); 
+
+            /* 
+            wyświetlamy wyniki, sprawdzamy, 
+            czy zapytanie zwróciło wartość większą od 0 
+            */ 
+            if(mysql_num_rows($wynik) > 0) { 
+                /* jeżeli wynik jest pozytywny, to wyświetlamy dane */ 
+                echo "<table cellpadding=\"2\" border=1>"; 
+                while($r = mysql_fetch_assoc($wynik)) { 
+                    echo "<tr>"; 
+                    echo "<td>".$r['match_id']."</td>"; 
+                    echo "<td>".$r['date']."</td>"; 
+                    echo "<td> 
+                  <a href=\"index.php?a=del&amp;id={$r['id']}\">DEL</a> 
+                  <a href=\"index.php?a=edit&amp;id={$r['id']}\">EDIT</a> 
+                  </td>"; 
+                    echo "</tr>"; 
+                } 
+                echo "</table>"; 
+            } 
+
+            ?>  
+
               <p>The Werrington United Team was founded in 2012 by a group of friends in Peterborough. Initially, it was
                   just a pleasant
                   form of spending free time. In 2014, Werrington Utd team played for the first time in the Cambridgeshire
