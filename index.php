@@ -95,7 +95,10 @@
       </div>
     </div>
   </nav>
+<<<<<<< HEAD
 
+=======
+>>>>>>> FixSlides
   <!-- Header section -->
     <header id="header">
       <div class="mySlides">
@@ -143,7 +146,11 @@
         <div class="row"> 
           <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">
               <h1>CLUB</h1>
+<<<<<<< HEAD
                          
+=======
+                      
+>>>>>>> FixSlides
               <p>The Werrington United Team was founded in 2012 by a group of friends in Peterborough. Initially, it was
                   just a pleasant
                   form of spending free time. In 2014, Werrington Utd team played for the first time in the Cambridgeshire
@@ -151,6 +158,7 @@
                   <figcaption>
                     <img src="/img/club-sec/werrington-centre.jpg" class="img-fluid" alt="Responsive-image">
                     <figcaption>The first team training room was located in Werrington - zone of Peterborough. That's where the name of team comes from.</figcaption>
+<<<<<<< HEAD
                   </figcaption>
                 
     
@@ -339,14 +347,80 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
+=======
+                  </figcaption>            
+              </div>
+        </div>
+      </div>
+  </section>
+  
+  <!-- League Table-->
+  <section class="news" id="news">
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">
+           <br><br><br>
+            <div></div>
+        
+          </div>
+        </div>
+      <h1 class="text-center mb-3">LEAGUE TABLE       
+      </h1>
+       <div>
+           <?php
+            $con = mysql_connect("localhost","root","","werrington");
+            if (!$con)
+            {
+            die('Could not connect: ' . mysql_error());
+            }
+            
+            mysql_select_db("werrington", $con);
+            
+            $result = mysql_query("SELECT match_id,date,team_id FROM matches");
+            echo $result;
+            
+            echo "<tr><td>$row['match_id']</td><td>$row['date']</td><td>$row['team_id']</td></tr>";
+            while($row = mysql_fetch_array($result)) {
+                echo "<tr><td>$row['match_id']</td><td>$row['date']</td><td>$row['team_id']</td></tr>";
+            }
+            echo '</table>';
+            
+            mysql_close($con);
+          ?>
+
+        </div> 
+
+      <div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+>>>>>>> FixSlides
       </div>
     </div>
   </section>
 
+<<<<<<< HEAD
   <!-- Class Schedule section -->
   <section class="schedule" id="schedule">
     <h1>Расписание Занятий
       <span class="hashtag">/</span>
+=======
+  <!-- Matches section -->
+  <section class="schedule" id="schedule">
+    <h1>MATCHES      
+>>>>>>> FixSlides
     </h1>
 
     <div class="rt-routine">
@@ -355,6 +429,7 @@
           <tr>
             <th></th>
             <th class="rt-col-title">
+<<<<<<< HEAD
               <div>Понедельник</div>
             </th>
             <th class="rt-col-title">
@@ -371,6 +446,24 @@
             </th>
             <th class="rt-col-title">
               <div>Суббота</div>
+=======
+              <div>Monday</div>
+            </th>
+            <th class="rt-col-title">
+              <div>Tuesday</div>
+            </th>
+            <th class="rt-col-title">
+              <div>Wednesday</div>
+            </th>
+            <th class="rt-col-title">
+              <div>Thursday</div>
+            </th>
+            <th class="rt-col-title">
+              <div>Friday</div>
+            </th>
+            <th class="rt-col-title">
+              <div>Saturday</div>
+>>>>>>> FixSlides
             </th>
           </tr>
 
@@ -378,7 +471,11 @@
             <th class="rt-row-title">09:00</th>
             <td>
               <a class="rt-item rt-item">
+<<<<<<< HEAD
                 <div class="rt-item-title">Jiu Jitsu Самооборона</div>
+=======
+                <div class="rt-item-title">Volleyball</div>
+>>>>>>> FixSlides
                 <div class="rt-item-time">
                   <span>09:00</span>
                   <span>- 11:00</span>
@@ -387,7 +484,11 @@
             </td>
             <td>
               <a class="rt-item rt-item">
+<<<<<<< HEAD
                 <div class="rt-item-title">Jiu Jitsu Самооборона</div>
+=======
+                <div class="rt-item-title">Volleyball</div>
+>>>>>>> FixSlides
                 <div class="rt-item-time">
                   <span>09:00</span>
                   <span>- 11:00</span>
@@ -602,7 +703,11 @@
             <td></td>
             <td>
               <a class="rt-item rt-item">
+<<<<<<< HEAD
                 <div class="rt-item-title">Jiu Jitsu для взрослых</div>
+=======
+                <div class="rt-item-title">Jiu Jitsu dla ludzi</div>
+>>>>>>> FixSlides
                 <div class="rt-item-time">
                   <span>18:45</span>
                   <span>- 20:30</span>
@@ -652,6 +757,7 @@
     </div>
   </section>
 
+<<<<<<< HEAD
   <!-- Pricing section -->
   <section class="pricing" id="pricing">
     <div class="container">
@@ -833,6 +939,8 @@
     </div>
   </section>
 
+=======
+>>>>>>> FixSlides
   <!-- Footer section -->
   <footer id="contact">
     <div class="container">
