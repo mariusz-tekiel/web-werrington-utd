@@ -363,27 +363,7 @@
         </div>
       <h1 class="text-center mb-3">LEAGUE TABLE       
       </h1>
-       <div>
-           <?php
-            $con = mysql_connect("localhost","root","","werrington");
-            if (!$con)
-            {
-            die('Could not connect: ' . mysql_error());
-            }
-            
-            mysql_select_db("werrington", $con);
-            
-            $result = mysql_query("SELECT match_id,match_date,team_id FROM matches");
-            echo $result;
-            
-            echo "<tr><td>$row['match_id']</td><td>$row['match_date']</td><td>$row['team_id']</td></tr>";
-            while($row = mysql_fetch_array($result)) {
-             echo "<tr><td>$row['match_id']</td><td>$row['match_date']</td><td>$row['team_id']</td></tr>";
-            }
-            echo '</table>';
-            
-            mysql_close($con);
-          ?>
+       
 
         </div> 
 
