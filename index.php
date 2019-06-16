@@ -383,23 +383,36 @@
         <br>
         <br>
         <br>
->>>>>>> FixSlides
+
       </div>
     </div>
   </section>
 
-<<<<<<< HEAD
-  <!-- Class Schedule section -->
-  <section class="schedule" id="schedule">
-    <h1>Расписание Занятий
-      <span class="hashtag">/</span>
-=======
+ 
   <!-- Matches section -->
   <section class="schedule" id="schedule">
-    <h1>MATCHES      
->>>>>>> FixSlides
-    </h1>
+    <h1>MATCHES</h1>
+ <?php
 
+   try
+   {
+      $pdo = new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
+      $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      
+      $stmt = $pdo->query('SELECT match_id, match_date, team1_id FROM matches');
+      echo '<ul>';
+      foreach($stmt as $row)
+      {
+          echo '<li>'.$row['match_date'].': '.$row['team1_id'].'</li>';
+      }
+      $stmt->closeCursor();
+      echo '</ul>';
+   }
+   catch(PDOException $e)
+   {
+      echo 'Połączenie nie mogło zostać utworzone: ' . $e->getMessage();
+   }
+?>
     <div class="rt-routine">
       <table class="tab-content">
         <tbody>
