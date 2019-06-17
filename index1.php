@@ -57,14 +57,29 @@
       $pdo = new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
       $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       
-      $stmt = $pdo->query('SELECT match_date,team1_name,team2_name FROM matches');
-      echo '<ul>';
+      $stmt = $pdo->query('SELECT match_date,team1_name,team2_name,team1_score,team2_score FROM matches');
+
+
+
+
+
+
+     // echo '<ul>';
+     echo '<TABLE border="2">';
+     echo '<TR>';
       foreach($stmt as $row)
       {
-          echo '<li>'.$row['match_date'].': '.$row['team1_name'].': '.$row['team2_name'].'</li>';
+        //echo '<li>'.$row['match_date'].' '.$row['team1_name'].' '.$row['team2_name'].'</li>';
+   
+    echo "<tr><td>{$row['match_date']}</td><td>{$row['team1_name']}</td><td>{$row['team2_name']}</td>
+      <td>{$row['team1_score']}</td><td>{$row['team2_score']}</td></tr>"; 
+
+
       }
       $stmt->closeCursor();
-      echo '</ul>';
+     // echo '</ul>';
+     echo '</TR>';
+     echo '</TABLE>';
    }
    catch(PDOException $e)
    {
