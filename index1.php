@@ -46,7 +46,7 @@
 </head>
 
 <body>
-    <h1>OTO DANE:</h1>
+    <h2>OTO DANE:</h2>
     <div>
       
  
@@ -57,22 +57,21 @@
       $pdo = new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
       $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       
-      $stmt = $pdo->query('SELECT match_date,team1_name,team2_name,team1_score,team2_score FROM matches');
+      $stmt = $pdo->query('SELECT team_id as no, team_name as team, played, lost, won, points FROM `teams` ');
 
      echo '<TABLE class="table"  border="2">';
-     echo '<TR>';
+          
       foreach($stmt as $row)
       {
         //echo '<li>'.$row['match_date'].' '.$row['team1_name'].' '.$row['team2_name'].'</li>';
-   
-    echo "<tr><td>{$row['match_date']}&nbsp</td><td>{$row['team1_name']}</td><td>{$row['team2_name']}</td>
-      <td>{$row['team1_score']}</td><td>{$row['team2_score']}</td></tr>"; 
-
+     
+    echo "<tr><td>{$row['no']}&nbsp</td><td>{$row['team']}</td><td>{$row['played']}</td>
+      <td>{$row['lost']}</td><td>{$row['won']}</td><td>{$row['points']}</td></tr>"; 
 
       }
       $stmt->closeCursor();
 
-     echo '</TR>';
+     
      echo '</TABLE>';
    }
    catch(PDOException $e)
@@ -81,11 +80,6 @@
    }
 ?>
     </div>
-
-
-
-
-
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp5-_DaBgWKUbg34oVgi4QSIKXJ5YC_aI&callback=myMap"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"

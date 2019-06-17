@@ -167,55 +167,7 @@
     
   </section>
   <!-- Coach section -->
-  <section class="coach" id="coach">
-    <div class="row">
-      <div class="col-12 col-md-6 p-0">
-        <img alt="..." class="coachImg" src="img/coach1.jpg">
-      </div>
-
-      <div class="col-12 col-md-6 p-0">
-        <h1>Сюмбели Wiktor
-          <span class="hashtag">/</span>
-        </h1>
-        <div class="coachInfo">
-          <ul>
-            <li>trener to jest zmiana</li>
-            
-            
-            <li>Bede zmienial materialy
-              <span class="hashtag"> / </span>MMA</li>
-            <li>~Co nowego Мира в версии Submission Kempo
-              <span class="hashtag"> / </span>MMA</li>
-            <li>Многократный чемпион и призёр Молдовы по Jiu Jitsu</li>
-            <li>Многократный призёр стран СНГ по Jiu Jitsu</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="row" style="flex-wrap: wrap-reverse;">
-      <div class="col-12 col-md-6 p-0">
-        <h1>Китаев Артём
-          <span class="hashtag">/</span>
-        </h1>
-        <div class="coachInfo">
-          <ul>
-            <li>Тренер клуба SportHouse и Bushin Dojo</li>
-            <li>Чёрный пояс (2 дан) по японскому Jiu Jitsu</li>
-            <li>Чёрный пояс (1 дан) Kempo
-              <span class="hashtag"> / </span>MMA</li>
-            <li>Синий пояс по бразильскому Jiu Jitsu</li>
-            <li>Многократный чемпион и призёр Молдовы по Jiu Jitsu</li>
-            <li>Многократный призёр стран СНГ по Jiu Jitsu</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 p-0">
-        <img alt="Китаев Артём" class="coachImg" src="img/coach2.jpg">
-      </div>
-    </div>
-  </section>
+  
 
   <!-- Citation section -->
   <section class="citation">
@@ -363,9 +315,37 @@
         </div>
       <h1 class="text-center mb-3">LEAGUE TABLE       
       </h1>
-       
+   <?php
 
-        </div> 
+   try
+   {
+      $pdo = new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
+      $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      
+      $stmt = $pdo->query('SELECT team_id as no, team_name as team, played, lost, won, points FROM `teams` ');
+
+     echo '<TABLE class="table"  border="2">';
+          
+      foreach($stmt as $row)
+      {
+        //echo '<li>'.$row['match_date'].' '.$row['team1_name'].' '.$row['team2_name'].'</li>';
+     
+    echo "<tr><td>{$row['no']}&nbsp</td><td>{$row['team']}</td><td>{$row['played']}</td>
+      <td>{$row['lost']}</td><td>{$row['won']}</td><td>{$row['points']}</td></tr>"; 
+
+      }
+      $stmt->closeCursor();
+
+     
+     echo '</TABLE>';
+   }
+   catch(PDOException $e)
+   {
+      echo 'Połączenie nie mogło zostać utworzone: ' . $e->getMessage();
+   }
+?>
+
+        
 
       <div>
         <br>
