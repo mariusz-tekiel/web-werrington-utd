@@ -608,3 +608,20 @@ footer .right {
 .copyright a:hover {
   color: #d3d7e3;
 }
+.table {
+  width: 70%;
+  border-collapse: collapse;
+  border-spacing: 3;
+  margin-bottom: 3%;
+}
+.table td,
+th {
+  font-size: 14px;
+  border-top: 2px solid #ddd;
+  padding: 5px 12px;
+  text-align: center;
+  vertical-align: top;
+}
+.table tbody tr:nth-child(even) td {
+  background-color: #f1f1ce;
+}

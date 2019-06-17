@@ -65,13 +65,13 @@
 
 
      // echo '<ul>';
-     echo '<TABLE border="2">';
+     echo '<TABLE class="table"  border="2">';
      echo '<TR>';
       foreach($stmt as $row)
       {
         //echo '<li>'.$row['match_date'].' '.$row['team1_name'].' '.$row['team2_name'].'</li>';
    
-    echo "<tr><td>{$row['match_date']}</td><td>{$row['team1_name']}</td><td>{$row['team2_name']}</td>
+    echo "<tr><td>{$row['match_date']}&nbsp</td><td>{$row['team1_name']}</td><td>{$row['team2_name']}</td>
       <td>{$row['team1_score']}</td><td>{$row['team2_score']}</td></tr>"; 
 
 
