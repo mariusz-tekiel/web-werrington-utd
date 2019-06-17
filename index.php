@@ -157,153 +157,13 @@
                     <figcaption>The first team training room was located in Werrington - zone of Peterborough. That's where the name of team comes from.</figcaption>
 <<<<<<< HEAD
                   </figcaption>
-                
-    
-          </div>
+           </div>
         </div>
       </div>
         
-      
-    
   </section>
-  <!-- Coach section -->
-  
-
-  <!-- Citation section -->
-  <section class="citation">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-sm-10 col-md-8 col-lg-7 text-left">
-          <h1>ПРЕОДОЛЕЙ СВОЙ ПРЕДЕЛ
-            <span class="hashtag">/</span>
-          </h1>
-          <p>Невозможно — это всего лишь громкое слово, за которым прячутся слабые люди.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Galery -->
-  <section class="news" id="news">
-    <div class="container">
-      <h1 class="text-center mb-3">Gallery
-        <span class="hashtag">/</span>
-      </h1>
-      <div id="myCarousel" class="carousel slide" data-interval="false">
-        <div class="carousel-inner row mx-auto">
-          <div class="carousel-item col-md-4 active">
-            <div class="card">
-              <img class="card-img-top img-fluid" src="img/news/news8.jpg" alt="Jiu jitsu Children's Day 2018">
-              <div class="card-body">
-                <h4 class="card-title">Международный день детей!</h4>
-                <p class="card-text">В честь праздника спорт клуб Sport House и Bushin Dojo организует прадзник для деток от 4 до 12 лет!</p>
-                <p class="card-text">
-                  <small class="text-muted">25 мая 2018</small>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item col-md-4">
-            <div class="card">
-              <img class="card-img-top img-fluid" src="img/news/news7.png" alt="Jiu jitsu championship league 2018">
-              <div class="card-body">
-                <h4 class="card-title">Запускаем новый проект!</h4>
-                <p class="card-text">Будет жарко! Следим за новостями проекта...</p>
-                <p class="card-text">
-                  <small class="text-muted">7 мая 2018</small>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item col-md-4">
-            <div class="card">
-              <img class="card-img-top img-fluid" src="img/news/news6.png" alt="Jiu jitsu Kids championship 2018">
-              <div class="card-body">
-                <h4 class="card-title">Внимание!</h4>
-                <p class="card-text">Семинар со звездой спорта, MMA-BJJ-GRAPPLING, Роман Долидзе, 5 дней горячих тренировок. Не упусти свой шанс!</p>
-                <p class="card-text">
-                  <small class="text-muted">25 марта 2018</small>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item col-md-4">
-            <div class="card">
-              <img class="card-img-top img-fluid" src="img/news/news5.png" alt="Jiu jitsu Kids championship 2018">
-              <div class="card-body">
-                <h4 class="card-title">Набор!</h4>
-                <p class="card-text">Набор детей от 5 - 10 лет, в детскую группу по Jiu Jitsu!</p>
-                <p class="card-text">
-                  <small class="text-muted">26 февраля 2018</small>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item col-md-4">
-            <div class="card">
-              <img class="card-img-top img-fluid" src="img/news/news4.png" alt="Jiu jitsu Kids championship 2018">
-              <div class="card-body">
-                <h4 class="card-title">Jiu Jitsu Kids Championship</h4>
-                <p class="card-text">10 марта 2018 года состоится первый детский турнир по правилам BJJ! Возрастная категория: 5-10 лет.</p>
-                <p class="card-text">
-                  <small class="text-muted">14 февраля 2018</small>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item col-md-4">
-            <div class="card">
-              <img class="card-img-top img-fluid" src="img/news/news1.jpg" alt="Monkey Kids Team">
-              <div class="card-body">
-                <h4 class="card-title">Jiu Jitsu для детей</h4>
-                <p class="card-text">Продолжается набор в детскую группу по Jiu jitsu! Набор с 5 лет.</p>
-                <p class="card-text">
-                  <small class="text-muted">19 января 2018</small>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item col-md-4">
-            <div class="card">
-              <img class="card-img-top img-fluid" src="img/news/news2.jpeg" alt="Тариф Семейный">
-              <div class="card-body">
-                <h4 class="card-title">Семейный Тариф</h4>
-                <p class="card-text">При покупки более трех абонементов, скидка 25% на каждый абонемент.</p>
-                <p class="card-text">
-                  <small class="text-muted">13 января 2018</small>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item col-md-4">
-            <div class="card">
-              <img class="card-img-top img-fluid" src="img/news/news3.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h4 class="card-title">Open Mat!</h4>
-                <p class="card-text">10 Февряля, в 14:00 в клубе состоиться открытый ковер для всех желающих.</p>
-                <p class="card-text">
-                  <small class="text-muted">10 января 2018</small>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-=======
-                  </figcaption>            
-              </div>
-        </div>
-      </div>
-  </section>
-  
-  <!-- League Table-->
+ 
+  <!-- League Table Section-->
   <section class="news" id="news">
     <div class="container">
         <div class="row">
@@ -344,9 +204,6 @@
       echo 'Połączenie nie mogło zostać utworzone: ' . $e->getMessage();
    }
 ?>
-
-        
-
       <div>
         <br>
         <br>
