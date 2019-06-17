@@ -59,12 +59,6 @@
       
       $stmt = $pdo->query('SELECT match_date,team1_name,team2_name,team1_score,team2_score FROM matches');
 
-
-
-
-
-
-     // echo '<ul>';
      echo '<TABLE class="table"  border="2">';
      echo '<TR>';
       foreach($stmt as $row)
@@ -77,7 +71,7 @@
 
       }
       $stmt->closeCursor();
-     // echo '</ul>';
+
      echo '</TR>';
      echo '</TABLE>';
    }

@@ -392,359 +392,37 @@
   <!-- Matches section -->
   <section class="schedule" id="schedule">
     <h1>MATCHES</h1>
- <?php
+  <?php
 
    try
    {
       $pdo = new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
       $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       
-      $stmt = $pdo->query('SELECT match_id, match_date, team1_id FROM matches');
-      echo '<ul>';
+      $stmt = $pdo->query('SELECT match_date,team1_name,team2_name,team1_score,team2_score FROM matches');
+
+     echo '<TABLE class="table"  border="2">';
+     echo '<TR>';
       foreach($stmt as $row)
       {
-          echo '<li>'.$row['match_date'].': '.$row['team1_id'].'</li>';
+        //echo '<li>'.$row['match_date'].' '.$row['team1_name'].' '.$row['team2_name'].'</li>';
+   
+    echo "<tr><td>{$row['match_date']}&nbsp</td><td>{$row['team1_name']}</td><td>{$row['team2_name']}</td>
+      <td>{$row['team1_score']}</td><td>{$row['team2_score']}</td></tr>"; 
+
+
       }
       $stmt->closeCursor();
-      echo '</ul>';
+
+     echo '</TR>';
+     echo '</TABLE>';
    }
    catch(PDOException $e)
    {
       echo 'Połączenie nie mogło zostać utworzone: ' . $e->getMessage();
    }
 ?>
-    <div class="rt-routine">
-      <table class="tab-content">
-        <tbody>
-          <tr>
-            <th></th>
-            <th class="rt-col-title">
-<<<<<<< HEAD
-              <div>Понедельник</div>
-            </th>
-            <th class="rt-col-title">
-              <div>Вторник</div>
-            </th>
-            <th class="rt-col-title">
-              <div>Среда</div>
-            </th>
-            <th class="rt-col-title">
-              <div>Четверг</div>
-            </th>
-            <th class="rt-col-title">
-              <div>Пятница</div>
-            </th>
-            <th class="rt-col-title">
-              <div>Суббота</div>
-=======
-              <div>Monday</div>
-            </th>
-            <th class="rt-col-title">
-              <div>Tuesday</div>
-            </th>
-            <th class="rt-col-title">
-              <div>Wednesday</div>
-            </th>
-            <th class="rt-col-title">
-              <div>Thursday</div>
-            </th>
-            <th class="rt-col-title">
-              <div>Friday</div>
-            </th>
-            <th class="rt-col-title">
-              <div>Saturday</div>
->>>>>>> FixSlides
-            </th>
-          </tr>
-
-          <tr>
-            <th class="rt-row-title">09:00</th>
-            <td>
-              <a class="rt-item rt-item">
-<<<<<<< HEAD
-                <div class="rt-item-title">Jiu Jitsu Самооборона</div>
-=======
-                <div class="rt-item-title">Volleyball</div>
->>>>>>> FixSlides
-                <div class="rt-item-time">
-                  <span>09:00</span>
-                  <span>- 11:00</span>
-                </div>
-              </a>
-            </td>
-            <td>
-              <a class="rt-item rt-item">
-<<<<<<< HEAD
-                <div class="rt-item-title">Jiu Jitsu Самооборона</div>
-=======
-                <div class="rt-item-title">Volleyball</div>
->>>>>>> FixSlides
-                <div class="rt-item-time">
-                  <span>09:00</span>
-                  <span>- 11:00</span>
-                </div>
-              </a>
-            </td>
-            <td>
-              <a class="rt-item rt-item">
-                <div class="rt-item-title">Jiu Jitsu Самооборона</div>
-                <div class="rt-item-time">
-                  <span>09:00</span>
-                  <span>- 11:00</span>
-                </div>
-              </a>
-            </td>
-            <td>
-              <a class="rt-item rt-item">
-                <div class="rt-item-title">Jiu Jitsu Самооборона</div>
-                <div class="rt-item-time">
-                  <span>09:00</span>
-                  <span>- 11:00</span>
-                </div>
-              </a>
-            </td>
-            <td>
-              <a class="rt-item rt-item">
-                <div class="rt-item-title">Jiu Jitsu Самооборона</div>
-                <div class="rt-item-time">
-                  <span>09:00</span>
-                  <span>- 11:00</span>
-                </div>
-              </a>
-            </td>
-            <td></td>
-          </tr>
-
-          <tr>
-            <th class="rt-row-title">09:30</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>
-              <a class="rt-item rt-item">
-                <div class="rt-item-title">Jiu Jitsu для детей</div>
-                <div class="rt-item-time">
-                  <span>09:30</span>
-                  <span>- 10:30</span>
-                </div>
-              </a>
-            </td>
-          </tr>
-
-          <tr>
-            <th class="rt-row-title">11:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>
-              <a class="rt-item rt-item">
-                <div class="rt-item-title">Jiu Jitsu для взрослых</div>
-                <div class="rt-item-time">
-                  <span>11:00</span>
-                  <span>- 12:30</span>
-                </div>
-              </a>
-            </td>
-          </tr>
-
-          <tr>
-            <th class="rt-row-title">14:00</th>
-            <td>
-              <a class="rt-item rt-item">
-                <div class="rt-item-title">Айкидо</div>
-                <div class="rt-item-time">
-                  <span>14:00</span>
-                  <span>- 15:30</span>
-                </div>
-              </a>
-            </td>
-            <td></td>
-            <td>
-              <a class="rt-item rt-item">
-                <div class="rt-item-title">Айкидо</div>
-                <div class="rt-item-time">
-                  <span>14:00</span>
-                  <span>- 15:30</span>
-                </div>
-              </a>
-            </td>
-            <td></td>
-            <td>
-              <a class="rt-item rt-item">
-                <div class="rt-item-title">Айкидо</div>
-                <div class="rt-item-time">
-                  <span>14:00</span>
-                  <span>- 15:30</span>
-                </div>
-              </a>
-            </td>
-            <td></td>
-          </tr>
-
-          <tr>
-            <th class="rt-row-title">15:00</th>
-            <td></td>
-            <td>
-              <a class="rt-item rt-item">
-                <div class="rt-item-title">Бокс</div>
-                <div class="rt-item-time">
-                  <span>15:00</span>
-                  <span>- 17:00</span>
-                </div>
-              </a>
-            </td>
-            <td></td>
-            <td>
-              <a class="rt-item rt-item">
-                <div class="rt-item-title">Бокс</div>
-                <div class="rt-item-time">
-                  <span>15:00</span>
-                  <span>- 17:00</span>
-                </div>
-              </a>
-            </td>
-            <td></td>
-            <td>
-              <a class="rt-item rt-item">
-                <div class="rt-item-title">Бокс</div>
-                <div class="rt-item-time">
-                  <span>15:00</span>
-                  <span>- 17:00</span>
-                </div>
-              </a>
-            </td>
-          </tr>
-
-          <tr>
-            <th class="rt-row-title">17:30</th>
-            <td>
-              <a class="rt-item rt-item">
-                <div class="rt-item-title">Jiu Jitsu для детей</div>
-                <div class="rt-item-time">
-                  <span>17:30</span>
-                  <span>- 18:30</span>
-                </div>
-              </a>
-            </td>
-            <td></td>
-            <td>
-              <a class="rt-item rt-item">
-                <div class="rt-item-title">Jiu Jitsu для детей</div>
-                <div class="rt-item-time">
-                  <span>17:30</span>
-                  <span>- 18:30</span>
-                </div>
-              </a>
-            </td>
-            <td></td>
-            <td>
-              <a class="rt-item rt-item">
-                <div class="rt-item-title">Jiu Jitsu для детей</div>
-                <div class="rt-item-time">
-                  <span>17:30</span>
-                  <span>- 18:30</span>
-                </div>
-              </a>
-            </td>
-            <td></td>
-          </tr>
-
-          <tr>
-            <th class="rt-row-title">18:00</th>
-            <td></td>
-            <td>
-              <a class="rt-item rt-item">
-                <div class="rt-item-title">Jiu Jitsu для детей</div>
-                <div class="rt-item-time">
-                  <span>18:00</span>
-                  <span>- 19:00</span>
-                </div>
-              </a>
-            </td>
-            <td></td>
-            <td>
-              <a class="rt-item rt-item">
-                <div class="rt-item-title">Jiu Jitsu для детей</div>
-                <div class="rt-item-time">
-                  <span>18:00</span>
-                  <span>- 19:00</span>
-                </div>
-              </a>
-            </td>
-            <td></td>
-            <td></td>
-          </tr>
-
-          <tr>
-            <th class="rt-row-title">18:45</th>
-            <td>
-              <a class="rt-item rt-item">
-                <div class="rt-item-title">Jiu Jitsu для взрослых</div>
-                <div class="rt-item-time">
-                  <span>18:45</span>
-                  <span>- 20:30</span>
-                </div>
-              </a>
-            </td>
-            <td></td>
-            <td>
-              <a class="rt-item rt-item">
-<<<<<<< HEAD
-                <div class="rt-item-title">Jiu Jitsu для взрослых</div>
-=======
-                <div class="rt-item-title">Jiu Jitsu dla ludzi</div>
->>>>>>> FixSlides
-                <div class="rt-item-time">
-                  <span>18:45</span>
-                  <span>- 20:30</span>
-                </div>
-              </a>
-            </td>
-            <td></td>
-            <td>
-              <a class="rt-item rt-item">
-                <div class="rt-item-title">Jiu Jitsu для взрослых</div>
-                <div class="rt-item-time">
-                  <span>18:45</span>
-                  <span>- 20:30</span>
-                </div>
-              </a>
-            </td>
-            <td></td>
-          </tr>
-
-          <tr>
-            <th class="rt-row-title">19:00</th>
-            <td></td>
-            <td>
-              <a class="rt-item rt-item">
-                <div class="rt-item-title">Jiu Jitsu для взрослых</div>
-                <div class="rt-item-time">
-                  <span>19:00</span>
-                  <span>- 20:30</span>
-                </div>
-              </a>
-            </td>
-            <td></td>
-            <td>
-              <a class="rt-item rt-item">
-                <div class="rt-item-title">Jiu Jitsu для взрослых</div>
-                <div class="rt-item-time">
-                  <span>19:00</span>
-                  <span>- 20:30</span>
-                </div>
-              </a>
-            </td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    
   </section>
 
 <<<<<<< HEAD

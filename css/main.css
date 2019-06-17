@@ -606,7 +606,7 @@ footer .right {
 }
 
 .copyright a:hover {
-  color: #d3d7e3;
+  color: #f6f7c3;
 }
 .table {
   width: 70%;
@@ -623,5 +623,5 @@ th {
   vertical-align: top;
 }
 .table tbody tr:nth-child(even) td {
-  background-color: #f1f1ce;
+  background-color: #f7f7c7;
 }
