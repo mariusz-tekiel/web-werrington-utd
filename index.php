@@ -154,7 +154,7 @@
                   League game.</p>
                   <figure>
                     <img src="img/club-sec/werrington-centre.jpg" class="img-fluid" alt="Responsive-image">
-                   <figcaption>First base of Werrington Utd Team</figcaption>
+                   <figcaption>First base of Werrington United Team</figcaption>
                   </figure>
                   
            </div>
@@ -175,8 +175,9 @@
         </div>
       <h1 class="text-center mb-3">LEAGUE TABLE       
       </h1>
+ <div>
    <?php
-
+ 
    try
    {
       $pdo = new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
@@ -204,6 +205,7 @@
       echo 'Połączenie nie mogło zostać utworzone: ' . $e->getMessage();
    }
 ?>
+ </div>
       <div>
         <br>
         <br>
