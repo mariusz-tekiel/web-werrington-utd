@@ -152,11 +152,11 @@
                   just a pleasant
                   form of spending free time. In 2014, Werrington Utd team played for the first time in the Cambridgeshire
                   League game.</p>
-                  <figcaption>
-                    <img src="/img/club-sec/werrington-centre.jpg" class="img-fluid" alt="Responsive-image">
-                    <figcaption>The first team training room was located in Werrington - zone of Peterborough. That's where the name of team comes from.</figcaption>
-
-                  </figcaption>
+                  <figure>
+                    <img src="img/club-sec/werrington-centre.jpg" class="img-fluid" alt="Responsive-image">
+                   <figcaption>First base of Werrington Utd Team</figcaption>
+                  </figure>
+                  
            </div>
         </div>
       </div>
@@ -373,7 +373,7 @@
       });
       marker.setMap(map);
     }
-    //iuu
+    
   </script>
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp5-_DaBgWKUbg34oVgi4QSIKXJ5YC_aI&callback=myMap"></script>

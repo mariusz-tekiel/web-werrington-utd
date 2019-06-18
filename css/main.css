@@ -7,7 +7,11 @@ body {
   margin: 0;
   padding: 0;
 }
-
+h1 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+}
 .sp {
   color: #dac341;
   text-shadow: 1px 1px 1px #000000;
@@ -624,4 +628,15 @@ th {
 }
 .table tbody tr:nth-child(even) td {
   background-color: #f7f7c7;
+}
+.img-fluid {
+  height: 300px;
+  width: 600px;
+}
+.about .row {
+  text-align: center;
+}
+figcaption {
+  font-size: 10px;
+  font-weight: bold;
 }
