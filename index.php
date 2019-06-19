@@ -164,7 +164,7 @@
   </section>
  
   <!-- League Table Section-->
-  <section class="news" id="news">
+  <section class="league" id="news">
     <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">

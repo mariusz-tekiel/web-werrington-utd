@@ -182,7 +182,7 @@ header .header-text {
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  background-color: #f2f2f2;
+  background-color: #faf9ec;
 }
 
 @media (max-width: 1000px) and (min-width: 767px) {
