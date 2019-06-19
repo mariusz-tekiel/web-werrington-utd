@@ -304,97 +304,9 @@ header .header-text {
     visibility: visible;
   }
 }
-
-/****** Pricing Section ******/
-.pricing {
+/******Schedule Section*******/
+.schedule {
   text-align: center;
-  min-height: 500px;
-  background-attachment: fixed;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding: 100px 0;
-  color: #fff !important;
-  background-position: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/bg_pricing.jpg");
-}
-.league .table {
-  text-align: center;
-}
-
-.pricing h1 {
-  font-size: 2.75rem;
-  font-weight: 400;
-}
-
-.pricing .bg-gray {
-  padding: 3rem;
-  background-color: #fafafa;
-  color: #444444;
-}
-
-.pricing .text-bold {
-  font-size: 1rem;
-  margin-bottom: 0.5em;
-  margin-top: 0.3em;
-  font-weight: 400;
-}
-
-.pricing .bg-red {
-  padding: 1rem;
-  background: linear-gradient(#00a3cc, #0cf);
-}
-
-.pricing .bg-gra {
-  padding: 1rem;
-  background: linear-gradient(#52627c, #232a35);
-}
-
-.pricing .font-weight-light {
-  font-weight: 300;
-}
-
-.pricing img {
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-}
-
-.pricing .action-price {
-  font-size: 16px;
-  margin: 20px 0 auto auto;
-}
-
-.pricing .action-price span {
-  color: red;
-  font-size: 30px;
-  font-weight: 800;
-}
-
-@media only screen and (max-width: 1200px) {
-  .pricing .bg-gra {
-    padding: 1rem 0rem;
-  }
-
-  .pricing .bg-gray {
-    padding: 1rem;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .pricing .middle-price {
-    height: 400px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .pricing {
-    padding: 50px 0;
-  }
-
-  .pricing .text-center {
-    padding: 0 0 20px;
-  }
 }
 
 /****** Footer Section ******/

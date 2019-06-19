@@ -231,7 +231,7 @@
   <!-- Matches section -->
   <section class="schedule" id="schedule">
     <h1>MATCHES</h1>
-  <?php
+   <?php
 
    try
    {
@@ -242,6 +242,7 @@
 
      echo '<TABLE class="table"  border="2">';
      echo '<TR>';
+     
       foreach($stmt as $row)
       {
         //echo '<li>'.$row['match_date'].' '.$row['team1_name'].' '.$row['team2_name'].'</li>';
