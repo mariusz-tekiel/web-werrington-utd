@@ -177,7 +177,8 @@
       </h1>
  <div>
    <?php
- 
+
+        
    try
    {
       $pdo = new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
@@ -204,6 +205,7 @@
    {
       echo 'Połączenie nie mogło zostać utworzone: ' . $e->getMessage();
    }
+   
 ?>
  </div>
       <div>
