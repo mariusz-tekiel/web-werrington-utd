@@ -173,36 +173,42 @@
       <h1 class="text-center mb-3">LEAGUE TABLE       
       </h1>
  <div>
-
-   <?php
-           try
-   {
-      $pdo = new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
-      $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      
-      $stmt = $pdo->query('SELECT team_id as no, team_name as team, played, lost, won, points FROM `teams` ');
-
-     echo '<TABLE class="table" align="center"  border="2">';
-          
-      foreach($stmt as $row)
-      {
-        //echo '<li>'.$row['match_date'].' '.$row['team1_name'].' '.$row['team2_name'].'</li>';
-     
-    echo "<tr><td>{$row['no']}&nbsp</td><td>{$row['team']}</td><td>{$row['played']}</td>
-      <td>{$row['lost']}</td><td>{$row['won']}</td><td>{$row['points']}</td></tr>"; 
-
-      }
-      $stmt->closeCursor();
-
-     
-     echo '</TABLE>';
-   }
-   catch(PDOException $e)
-   {
-      echo 'Połączenie nie mogło zostać utworzone: ' . $e->getMessage();
-   }
+<?php
+		echo "<table style='border: solid 1px black;' class='table' align='center'>";
+		echo "<tr><th>Team Id</th><th>Team</th><th>Played</th><th>Lost</th><th>Won</th><th>Points</th></tr>";
+		class TableRows extends RecursiveIteratorIterator { 
+		     function __construct($it) { 
+		         parent::__construct($it, self::LEAVES_ONLY); 
+		     }
+		     function current() {
+		         return "<td style='width: 70%; border: 1px solid black;'>" . parent::current(). "</td>";
+		     }
+		     function beginChildren() { 
+		         echo "<tr>"; 
+		     } 
+		     function endChildren() { 
+		         echo "</tr>" . "\n";
+		     } 
+		 }
+		     
+		try {
+			     
+			     
+			     $stmt = $pdo->prepare("SELECT team_id as no, team_name as team, played, lost, won, points FROM teams"); 
+			     $stmt->execute();
+			     // set the resulting array to associative
+			     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC); 
+			     foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) { 
+			         echo $v;
+			     }
+			}
+			catch(PDOException $e) {
+			     echo "Error: " . $e->getMessage();
+			}
+			$conn = null;
+			echo "</table>";
+				?>
    
-?>
 
  </div>
       <div>
@@ -232,20 +238,7 @@
 <?php
 		echo "<table style='border: solid 1px black;' class='table' align='center'>";
 		echo "<tr><th>Id</th><th>Date</th><th>Team 1</th><th>Team 2</th><th>Sc1 </th><th>Sc2</th></tr>";
-		class TableRows extends RecursiveIteratorIterator { 
-		     function __construct($it) { 
-		         parent::__construct($it, self::LEAVES_ONLY); 
-		     }
-		     function current() {
-		         return "<td style='width: 70%; border: 1px solid black;'>" . parent::current(). "</td>";
-		     }
-		     function beginChildren() { 
-		         echo "<tr>"; 
-		     } 
-		     function endChildren() { 
-		         echo "</tr>" . "\n";
-		     } 
-		 }
+		
 		     
 		try {
 			     
