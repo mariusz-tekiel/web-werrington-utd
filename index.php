@@ -175,15 +175,14 @@
  <div>
 
    <?php
-        
-   try
+           try
    {
       $pdo = new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
       $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       
       $stmt = $pdo->query('SELECT team_id as no, team_name as team, played, lost, won, points FROM `teams` ');
 
-     echo '<TABLE class="table"  border="2">';
+     echo '<TABLE class="table" align="center"  border="2">';
           
       foreach($stmt as $row)
       {
@@ -226,20 +225,19 @@
       </div>
     </div>
   </section>
-
  
   <!-- Matches section -->
   <section class="schedule" id="schedule">
     <h1>MATCHES</h1>
 <?php
-		echo "<table style='border: solid 1px black;' class='table'>";
-		echo "<tr><th>Id</th><th>Date</th><th>Team1</th><th>Team2</th><th>Score Team1</th><th>Score Team2</th></tr>";
+		echo "<table style='border: solid 1px black;' class='table' align='center'>";
+		echo "<tr><th>Id</th><th>Date</th><th>Team 1</th><th>Team 2</th><th>Score Team 1</th><th>Score Team 2</th></tr>";
 		class TableRows extends RecursiveIteratorIterator { 
 		     function __construct($it) { 
 		         parent::__construct($it, self::LEAVES_ONLY); 
 		     }
 		     function current() {
-		         return "<td style='width: 150px; border: 1px solid black;'>" . parent::current(). "</td>";
+		         return "<td style='width: 70%; border: 1px solid black;'>" . parent::current(). "</td>";
 		     }
 		     function beginChildren() { 
 		         echo "<tr>"; 
@@ -249,7 +247,6 @@
 		     } 
 		 }
 		     
-			
 		try {
 			     
 			     
@@ -268,13 +265,7 @@
 			echo "</table>";
 				?>
 
-
-
-
-   
-    
   </section>
-
 
   <!-- Footer section -->
   <footer id="contact">
