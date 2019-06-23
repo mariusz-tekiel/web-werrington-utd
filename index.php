@@ -231,7 +231,7 @@
     <h1>MATCHES</h1>
 <?php
 		echo "<table style='border: solid 1px black;' class='table' align='center'>";
-		echo "<tr><th>Id</th><th>Date</th><th>Team 1</th><th>Team 2</th><th>Score Team 1</th><th>Score Team 2</th></tr>";
+		echo "<tr><th>Id</th><th>Date</th><th>Team 1</th><th>Team 2</th><th>Sc1 </th><th>Sc2</th></tr>";
 		class TableRows extends RecursiveIteratorIterator { 
 		     function __construct($it) { 
 		         parent::__construct($it, self::LEAVES_ONLY); 
