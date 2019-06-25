@@ -203,8 +203,28 @@
   <section class="schedule" id="schedule">
     <h1>MATCHES</h1>
 <?php
+<<<<<<< HEAD
 /*		echo "<table style='border: solid 1px black;' class='table' align='center'>";
 	     
+=======
+		echo "<table style='border: solid 1px black;' class='table' align='center'>";
+		echo "<tr><th>Id</th><th>Date</th><th>Team 1</th><th>Team 2</th><th>Score Team 1</th><th>Score Team 2</th></tr>";
+		class TableRows extends RecursiveIteratorIterator { 
+		     function __construct($it) { 
+		         parent::__construct($it, self::LEAVES_ONLY); 
+		     }
+		     function current() {
+		         return "<td style='width: 70%; border: 1px solid black;'>" . parent::current(). "</td>";
+		     }
+		     function beginChildren() { 
+		         echo "<tr>"; 
+		     } 
+		     function endChildren() { 
+		         echo "</tr>" . "\n";
+		     } 
+		 }
+		     
+>>>>>>> parent of 2d435fd... Before fix League Table
 		try {
 			   
 			     
