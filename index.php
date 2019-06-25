@@ -173,41 +173,8 @@
       <h1 class="text-center mb-3">LEAGUE TABLE       
       </h1>
  <div>
-<?php
-		echo "<table style='border: solid 1px black;' class='table' align='center'>";
-		echo "<tr><th>Team Id</th><th>Team</th><th>Played</th><th>Lost</th><th>Won</th><th>Points</th></tr>";
-		class TableRows extends RecursiveIteratorIterator { 
-		     function __construct($it) { 
-		         parent::__construct($it, self::LEAVES_ONLY); 
-		     }
-		     function current() {
-		         return "<td style='width: 70%; border: 1px solid black;'>" . parent::current(). "</td>";
-		     }
-		     function beginChildren() { 
-		         echo "<tr>"; 
-		     } 
-		     function endChildren() { 
-		         echo "</tr>" . "\n";
-		     } 
-		 }
-		     
-		try {
-			     
-			     
-			     $stmt = $pdo->prepare("SELECT team_id as no, team_name as team, played, lost, won, points FROM teams"); 
-			     $stmt->execute();
-			     // set the resulting array to associative
-			     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC); 
-			     foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) { 
-			         echo $v;
-			     }
-			}
-			catch(PDOException $e) {
-			     echo "Error: " . $e->getMessage();
-			}
-			$conn = null;
-			echo "</table>";
-				?>
+
+	
    
 
  </div>
@@ -237,8 +204,7 @@
     <h1>MATCHES</h1>
 <?php
 		echo "<table style='border: solid 1px black;' class='table' align='center'>";
-		echo "<tr><th>Id</th><th>Date</th><th>Team 1</th><th>Team 2</th><th>Sc1 </th><th>Sc2</th></tr>";
-		
+
 		     
 		try {
 			     
