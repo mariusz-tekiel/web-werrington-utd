@@ -95,7 +95,10 @@
       </div>
     </div>
   </nav>
+<<<<<<< HEAD
 
+=======
+>>>>>>> FixSlides
   <!-- Header section -->
     <header id="header">
       <div class="mySlides">
@@ -173,10 +176,13 @@
       <h1 class="text-center mb-3">LEAGUE TABLE       
       </h1>
  <div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 	
 =======
+=======
+>>>>>>> parent of ab485c7... Table 1 displayed ok
    <?php
         
    try
@@ -234,6 +240,7 @@
   <!-- Matches section -->
   <section class="schedule" id="schedule">
     <h1>MATCHES</h1>
+<<<<<<< HEAD
 <?php
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -284,11 +291,39 @@
       echo "</table>";
       */
 				?>
+=======
+   <?php
 
+   try
+   {
+      $pdo = new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
+      $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      
+      $stmt = $pdo->query('SELECT match_date,team1_name,team2_name,team1_score,team2_score FROM matches');
+>>>>>>> parent of ab485c7... Table 1 displayed ok
 
-
-
+     echo '<TABLE class="table"  border="2">';
+     echo '<TR>';
+     
+      foreach($stmt as $row)
+      {
+        //echo '<li>'.$row['match_date'].' '.$row['team1_name'].' '.$row['team2_name'].'</li>';
    
+    echo "<tr><td>{$row['match_date']}&nbsp</td><td>{$row['team1_name']}</td><td>{$row['team2_name']}</td>
+      <td>{$row['team1_score']}</td><td>{$row['team2_score']}</td></tr>"; 
+
+
+      }
+      $stmt->closeCursor();
+
+     echo '</TR>';
+     echo '</TABLE>';
+   }
+   catch(PDOException $e)
+   {
+      echo 'Połączenie nie mogło zostać utworzone: ' . $e->getMessage();
+   }
+?>
     
   </section>
 

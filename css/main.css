@@ -424,7 +424,6 @@ footer .right {
 .copyright a:hover {
   color: #f6f7c3;
 }
-
 .table {
   width: 70%;
   border-collapse: collapse;
@@ -434,7 +433,7 @@ footer .right {
 .table td,
 th {
   font-size: 14px;
-  border-top: 2px solid rgb(126, 126, 104);
+  border-top: 2px solid #ddd;
   padding: 5px 12px;
   text-align: center;
   vertical-align: top;
