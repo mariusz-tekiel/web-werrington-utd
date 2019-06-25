@@ -177,10 +177,13 @@
       </h1>
  <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 	
 =======
+=======
+>>>>>>> parent of ab485c7... Table 1 displayed ok
 =======
 >>>>>>> parent of ab485c7... Table 1 displayed ok
    <?php
@@ -240,6 +243,7 @@
   <!-- Matches section -->
   <section class="schedule" id="schedule">
     <h1>MATCHES</h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <?php
 <<<<<<< HEAD
@@ -301,6 +305,26 @@
       
       $stmt = $pdo->query('SELECT match_date,team1_name,team2_name,team1_score,team2_score FROM matches');
 >>>>>>> parent of ab485c7... Table 1 displayed ok
+=======
+   <?php
+
+   try
+   {
+      $pdo = new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
+      $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      
+      $stmt = $pdo->query('SELECT match_date,team1_name,team2_name,team1_score,team2_score FROM matches');
+
+     echo '<TABLE class="table"  border="2">';
+     echo '<TR>';
+     
+      foreach($stmt as $row)
+      {
+        //echo '<li>'.$row['match_date'].' '.$row['team1_name'].' '.$row['team2_name'].'</li>';
+   
+    echo "<tr><td>{$row['match_date']}&nbsp</td><td>{$row['team1_name']}</td><td>{$row['team2_name']}</td>
+      <td>{$row['team1_score']}</td><td>{$row['team2_score']}</td></tr>"; 
+>>>>>>> parent of ab485c7... Table 1 displayed ok
 
      echo '<TABLE class="table"  border="2">';
      echo '<TR>';
@@ -312,10 +336,15 @@
     echo "<tr><td>{$row['match_date']}&nbsp</td><td>{$row['team1_name']}</td><td>{$row['team2_name']}</td>
       <td>{$row['team1_score']}</td><td>{$row['team2_score']}</td></tr>"; 
 
-
       }
       $stmt->closeCursor();
 
+<<<<<<< HEAD
+      }
+      $stmt->closeCursor();
+
+=======
+>>>>>>> parent of ab485c7... Table 1 displayed ok
      echo '</TR>';
      echo '</TABLE>';
    }
