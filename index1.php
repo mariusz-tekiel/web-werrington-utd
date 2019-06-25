@@ -95,10 +95,7 @@
       </div>
     </div>
   </nav>
-<<<<<<< HEAD
 
-=======
->>>>>>> FixSlides
   <!-- Header section -->
     <header id="header">
       <div class="mySlides">
@@ -146,25 +143,37 @@
         <div class="row"> 
           <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">
               <h1>CLUB</h1>
+<<<<<<< HEAD:index.php
            
 
+=======
+                         
+>>>>>>> master:index1.php
               <p>The Werrington United Team was founded in 2012 by a group of friends in Peterborough. Initially, it was
                   just a pleasant
                   form of spending free time. In 2014, Werrington Utd team played for the first time in the Cambridgeshire
                   League game.</p>
-                  <figure>
-                    <img src="img/club-sec/werrington-centre.jpg" class="img-fluid" alt="Responsive-image">
-                   <figcaption>First base of Werrington United Team</figcaption>
-                  </figure>
-                  
+                  <figcaption>
+                    <img src="/img/club-sec/werrington-centre.jpg" class="img-fluid" alt="Responsive-image">
+                    <figcaption>The first team training room was located in Werrington - zone of Peterborough. That's where the name of team comes from.</figcaption>
+<<<<<<< HEAD:index.php
+
+                  </figcaption>
            </div>
         </div>
       </div>
         
+=======
+                  </figcaption>            
+    
+          </div>
+        </div>
+      </div>
+>>>>>>> master:index1.php
   </section>
  
   <!-- League Table Section-->
-  <section class="league" id="news">
+  <section class="news" id="news">
     <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">
@@ -175,20 +184,9 @@
         </div>
       <h1 class="text-center mb-3">LEAGUE TABLE       
       </h1>
- <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-	
-=======
-=======
->>>>>>> parent of ab485c7... Table 1 displayed ok
-=======
->>>>>>> parent of ab485c7... Table 1 displayed ok
+<<<<<<< HEAD:index.php
    <?php
 
-        
    try
    {
       $pdo = new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
@@ -215,14 +213,9 @@
    {
       echo 'Połączenie nie mogło zostać utworzone: ' . $e->getMessage();
    }
->>>>>>> parent of b2ae617... Przed zmianami w tabelach
-   
-<<<<<<< HEAD
-
-=======
 ?>
->>>>>>> parent of a9be7e1... dziala znowu
- </div>
+=======
+>>>>>>> master:index1.php
       <div>
         <br>
         <br>
@@ -239,79 +232,20 @@
         <br>
         <br>
         <br>
+<<<<<<< HEAD:index.php
 
+=======
+>>>>>>> master:index1.php
       </div>
     </div>
   </section>
 
+<<<<<<< HEAD:index.php
  
   <!-- Matches section -->
   <section class="schedule" id="schedule">
     <h1>MATCHES</h1>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<?php
-<<<<<<< HEAD
-<<<<<<< HEAD
-/*		echo "<table style='border: solid 1px black;' class='table' align='center'>";
-	     
-=======
-		echo "<table style='border: solid 1px black;' class='table' align='center'>";
-		echo "<tr><th>Id</th><th>Date</th><th>Team 1</th><th>Team 2</th><th>Score Team 1</th><th>Score Team 2</th></tr>";
-=======
-		echo "<table style='border: solid 1px black;' class='table'>";
-		echo "<tr><th>Id</th><th>Date</th><th>Team1</th><th>Team2</th><th>Score Team1</th><th>Score Team2</th></tr>";
->>>>>>> parent of b2ae617... Przed zmianami w tabelach
-		class TableRows extends RecursiveIteratorIterator { 
-		     function __construct($it) { 
-		         parent::__construct($it, self::LEAVES_ONLY); 
-		     }
-		     function current() {
-		         return "<td style='width: 150px; border: 1px solid black;'>" . parent::current(). "</td>";
-		     }
-		     function beginChildren() { 
-		         echo "<tr>"; 
-		     } 
-		     function endChildren() { 
-		         echo "</tr>" . "\n";
-		     } 
-		 }
-		     
-<<<<<<< HEAD
->>>>>>> parent of 2d435fd... Before fix League Table
-=======
-			
->>>>>>> parent of b2ae617... Przed zmianami w tabelach
-		try {
-			   
-			     
-			     $stmt = $pdo->prepare("SELECT * FROM matches"); 
-			     $stmt->execute();
-			     // set the resulting array to associative
-			     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC); 
-			     foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) { 
-			         echo $v;
-			     }
-			}
-			catch(PDOException $e) {
-			     echo "Error: " . $e->getMessage();
-			}
-			$conn = null;
-      echo "</table>";
-      */
-				?>
-=======
-   <?php
-
-   try
-   {
-      $pdo = new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
-      $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      
-      $stmt = $pdo->query('SELECT match_date,team1_name,team2_name,team1_score,team2_score FROM matches');
->>>>>>> parent of ab485c7... Table 1 displayed ok
-=======
-   <?php
+  <?php
 
    try
    {
@@ -322,18 +256,6 @@
 
      echo '<TABLE class="table"  border="2">';
      echo '<TR>';
-     
-      foreach($stmt as $row)
-      {
-        //echo '<li>'.$row['match_date'].' '.$row['team1_name'].' '.$row['team2_name'].'</li>';
-   
-    echo "<tr><td>{$row['match_date']}&nbsp</td><td>{$row['team1_name']}</td><td>{$row['team2_name']}</td>
-      <td>{$row['team1_score']}</td><td>{$row['team2_score']}</td></tr>"; 
->>>>>>> parent of ab485c7... Table 1 displayed ok
-
-     echo '<TABLE class="table"  border="2">';
-     echo '<TR>';
-     
       foreach($stmt as $row)
       {
         //echo '<li>'.$row['match_date'].' '.$row['team1_name'].' '.$row['team2_name'].'</li>';
@@ -341,15 +263,10 @@
     echo "<tr><td>{$row['match_date']}&nbsp</td><td>{$row['team1_name']}</td><td>{$row['team2_name']}</td>
       <td>{$row['team1_score']}</td><td>{$row['team2_score']}</td></tr>"; 
 
+
       }
       $stmt->closeCursor();
 
-<<<<<<< HEAD
-      }
-      $stmt->closeCursor();
-
-=======
->>>>>>> parent of ab485c7... Table 1 displayed ok
      echo '</TR>';
      echo '</TABLE>';
    }
@@ -361,6 +278,315 @@
     
   </section>
 
+=======
+  <!-- Matches section -->
+  <section class="schedule" id="schedule">
+    <h1>MATCHES      
+    </h1>
+
+    <div class="rt-routine">
+      <table class="tab-content">
+        <tbody>
+          <tr>
+            <th></th>
+            <th class="rt-col-title">
+              <div>Monday</div>
+            </th>
+            <th class="rt-col-title">
+              <div>Tuesday</div>
+            </th>
+            <th class="rt-col-title">
+              <div>Wednesday</div>
+            </th>
+            <th class="rt-col-title">
+              <div>Thursday</div>
+            </th>
+            <th class="rt-col-title">
+              <div>Friday</div>
+            </th>
+            <th class="rt-col-title">
+              <div>Saturday</div>
+            </th>
+          </tr>
+
+          <tr>
+            <th class="rt-row-title">09:00</th>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Volleyball</div>
+                <div class="rt-item-time">
+                  <span>09:00</span>
+                  <span>- 11:00</span>
+                </div>
+              </a>
+            </td>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Volleyball</div>
+                <div class="rt-item-time">
+                  <span>09:00</span>
+                  <span>- 11:00</span>
+                </div>
+              </a>
+            </td>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Jiu Jitsu Самооборона</div>
+                <div class="rt-item-time">
+                  <span>09:00</span>
+                  <span>- 11:00</span>
+                </div>
+              </a>
+            </td>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Jiu Jitsu Самооборона</div>
+                <div class="rt-item-time">
+                  <span>09:00</span>
+                  <span>- 11:00</span>
+                </div>
+              </a>
+            </td>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Jiu Jitsu Самооборона</div>
+                <div class="rt-item-time">
+                  <span>09:00</span>
+                  <span>- 11:00</span>
+                </div>
+              </a>
+            </td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <th class="rt-row-title">09:30</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Jiu Jitsu для детей</div>
+                <div class="rt-item-time">
+                  <span>09:30</span>
+                  <span>- 10:30</span>
+                </div>
+              </a>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="rt-row-title">11:00</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Jiu Jitsu для взрослых</div>
+                <div class="rt-item-time">
+                  <span>11:00</span>
+                  <span>- 12:30</span>
+                </div>
+              </a>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="rt-row-title">14:00</th>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Айкидо</div>
+                <div class="rt-item-time">
+                  <span>14:00</span>
+                  <span>- 15:30</span>
+                </div>
+              </a>
+            </td>
+            <td></td>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Айкидо</div>
+                <div class="rt-item-time">
+                  <span>14:00</span>
+                  <span>- 15:30</span>
+                </div>
+              </a>
+            </td>
+            <td></td>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Айкидо</div>
+                <div class="rt-item-time">
+                  <span>14:00</span>
+                  <span>- 15:30</span>
+                </div>
+              </a>
+            </td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <th class="rt-row-title">15:00</th>
+            <td></td>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Бокс</div>
+                <div class="rt-item-time">
+                  <span>15:00</span>
+                  <span>- 17:00</span>
+                </div>
+              </a>
+            </td>
+            <td></td>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Бокс</div>
+                <div class="rt-item-time">
+                  <span>15:00</span>
+                  <span>- 17:00</span>
+                </div>
+              </a>
+            </td>
+            <td></td>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Бокс</div>
+                <div class="rt-item-time">
+                  <span>15:00</span>
+                  <span>- 17:00</span>
+                </div>
+              </a>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="rt-row-title">17:30</th>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Jiu Jitsu для детей</div>
+                <div class="rt-item-time">
+                  <span>17:30</span>
+                  <span>- 18:30</span>
+                </div>
+              </a>
+            </td>
+            <td></td>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Jiu Jitsu для детей</div>
+                <div class="rt-item-time">
+                  <span>17:30</span>
+                  <span>- 18:30</span>
+                </div>
+              </a>
+            </td>
+            <td></td>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Jiu Jitsu для детей</div>
+                <div class="rt-item-time">
+                  <span>17:30</span>
+                  <span>- 18:30</span>
+                </div>
+              </a>
+            </td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <th class="rt-row-title">18:00</th>
+            <td></td>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Jiu Jitsu для детей</div>
+                <div class="rt-item-time">
+                  <span>18:00</span>
+                  <span>- 19:00</span>
+                </div>
+              </a>
+            </td>
+            <td></td>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Jiu Jitsu для детей</div>
+                <div class="rt-item-time">
+                  <span>18:00</span>
+                  <span>- 19:00</span>
+                </div>
+              </a>
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <th class="rt-row-title">18:45</th>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Jiu Jitsu для взрослых</div>
+                <div class="rt-item-time">
+                  <span>18:45</span>
+                  <span>- 20:30</span>
+                </div>
+              </a>
+            </td>
+            <td></td>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Jiu Jitsu для взрослых</div>
+                <div class="rt-item-time">
+                  <span>18:45</span>
+                  <span>- 20:30</span>
+                </div>
+              </a>
+            </td>
+            <td></td>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Jiu Jitsu для взрослых</div>
+                <div class="rt-item-time">
+                  <span>18:45</span>
+                  <span>- 20:30</span>
+                </div>
+              </a>
+            </td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <th class="rt-row-title">19:00</th>
+            <td></td>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Jiu Jitsu для взрослых</div>
+                <div class="rt-item-time">
+                  <span>19:00</span>
+                  <span>- 20:30</span>
+                </div>
+              </a>
+            </td>
+            <td></td>
+            <td>
+              <a class="rt-item rt-item">
+                <div class="rt-item-title">Jiu Jitsu для взрослых</div>
+                <div class="rt-item-time">
+                  <span>19:00</span>
+                  <span>- 20:30</span>
+                </div>
+              </a>
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+>>>>>>> master:index1.php
 
   <!-- Footer section -->
   <footer id="contact">
@@ -472,7 +698,6 @@
       });
       marker.setMap(map);
     }
-    
   </script>
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp5-_DaBgWKUbg34oVgi4QSIKXJ5YC_aI&callback=myMap"></script>
