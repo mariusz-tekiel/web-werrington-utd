@@ -228,37 +228,39 @@
 
  
   <!-- Matches section -->
-  <section class="schedule" id="schedule">
+<section class="schedule" id="schedule">
     <h1>MATCHES</h1>
-   <?php
-
-   try
-   {
-      $pdo = new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
-      $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      
-      $stmt = $pdo->query('SELECT match_date,team1_name,team2_name,team1_score,team2_score FROM matches');
-
-     echo '<TABLE class="table"  border="2">';
-     echo '<TR>';
-     
-      foreach($stmt as $row)
-      {
-        //echo '<li>'.$row['match_date'].' '.$row['team1_name'].' '.$row['team2_name'].'</li>';
-       echo "<tr><td>{$row['match_date']}&nbsp</td><td>{$row['team1_name']}</td><td>{$row['team2_name']}</td>
-      <td>{$row['team1_score']}</td><td>{$row['team2_score']}</td></tr>"; 
-
-
-      }
-      $stmt->closeCursor();
-
-     echo '</TR>';
-     echo '</TABLE>';
-   }
-   catch(PDOException $e)
-   {
-      echo 'Połączenie nie mogło zostać utworzone: ' . $e->getMessage();
-   }
+ <?php
+ try {
+    $con= new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
+    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query = "SELECT match_date,team1_name,team2_name,team1_score,team2_score FROM matches";
+  //first pass just gets the column names
+    print "<table > ";
+    $result = $con->query($query);
+  //return only the first row (we only need field names)
+    $row = $result->fetch(PDO::FETCH_ASSOC);
+      print " <tr>";
+    foreach ($row as $field => $value){
+      print " <th>$field</th>";
+    } // end foreach
+      print " </tr>";
+    //second query gets the data
+      $data = $con->query($query);
+      $data->setFetchMode(PDO::FETCH_ASSOC);
+    foreach($data as $row){
+        print " <tr>";
+      foreach ($row as $name=>$value){
+          print " <td>$value</td>";
+       } // end field loop
+      print " </tr>";
+    } // end record loop
+    print "</table>";
+ }
+ catch(PDOException $e) {
+   echo 'ERROR: ' . $e->getMessage();
+ } // end try
+ 
 ?>
     
   </section>
