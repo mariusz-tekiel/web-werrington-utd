@@ -95,7 +95,10 @@
       </div>
     </div>
   </nav>
+<<<<<<< HEAD
 
+=======
+>>>>>>> FixSlides
   <!-- Header section -->
     <header id="header">
       <div class="mySlides">
@@ -173,25 +176,8 @@
       <h1 class="text-center mb-3">LEAGUE TABLE       
       </h1>
  <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 59addd1... przed zmianami w tabelach
-
-<<<<<<< HEAD
-	
-=======
-<<<<<<< HEAD
-=======
->>>>>>> parent of ab485c7... Table 1 displayed ok
-=======
->>>>>>> parent of ab485c7... Table 1 displayed ok
-=======
->>>>>>> parent of 59addd1... przed zmianami w tabelach
    <?php
-
-        
+ 
    try
    {
       $pdo = new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
@@ -218,13 +204,7 @@
    {
       echo 'Połączenie nie mogło zostać utworzone: ' . $e->getMessage();
    }
->>>>>>> parent of b2ae617... Przed zmianami w tabelach
-   
-<<<<<<< HEAD
-
-=======
 ?>
->>>>>>> parent of a9be7e1... dziala znowu
  </div>
       <div>
         <br>
@@ -251,71 +231,6 @@
   <!-- Matches section -->
   <section class="schedule" id="schedule">
     <h1>MATCHES</h1>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 59addd1... przed zmianami w tabelach
-<?php
-<<<<<<< HEAD
-<<<<<<< HEAD
-/*		echo "<table style='border: solid 1px black;' class='table' align='center'>";
-	     
-=======
-		echo "<table style='border: solid 1px black;' class='table' align='center'>";
-		echo "<tr><th>Id</th><th>Date</th><th>Team 1</th><th>Team 2</th><th>Score Team 1</th><th>Score Team 2</th></tr>";
-=======
-		echo "<table style='border: solid 1px black;' class='table'>";
-		echo "<tr><th>Id</th><th>Date</th><th>Team1</th><th>Team2</th><th>Score Team1</th><th>Score Team2</th></tr>";
->>>>>>> parent of b2ae617... Przed zmianami w tabelach
-		class TableRows extends RecursiveIteratorIterator { 
-		     function __construct($it) { 
-		         parent::__construct($it, self::LEAVES_ONLY); 
-		     }
-		     function current() {
-		         return "<td style='width: 150px; border: 1px solid black;'>" . parent::current(). "</td>";
-		     }
-		     function beginChildren() { 
-		         echo "<tr>"; 
-		     } 
-		     function endChildren() { 
-		         echo "</tr>" . "\n";
-		     } 
-		 }
-		     
-<<<<<<< HEAD
->>>>>>> parent of 2d435fd... Before fix League Table
-=======
-			
->>>>>>> parent of b2ae617... Przed zmianami w tabelach
-		try {
-			   
-			     
-			     $stmt = $pdo->prepare("SELECT * FROM matches"); 
-			     $stmt->execute();
-			     // set the resulting array to associative
-			     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC); 
-			     foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) { 
-			         echo $v;
-			     }
-			}
-			catch(PDOException $e) {
-			     echo "Error: " . $e->getMessage();
-			}
-			$conn = null;
-      echo "</table>";
-      */
-				?>
-
-<<<<<<< HEAD
-   try
-   {
-      $pdo = new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
-      $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      
-      $stmt = $pdo->query('SELECT match_date,team1_name,team2_name,team1_score,team2_score FROM matches');
->>>>>>> parent of ab485c7... Table 1 displayed ok
-=======
    <?php
 
    try
@@ -334,30 +249,11 @@
    
     echo "<tr><td>{$row['match_date']}&nbsp</td><td>{$row['team1_name']}</td><td>{$row['team2_name']}</td>
       <td>{$row['team1_score']}</td><td>{$row['team2_score']}</td></tr>"; 
->>>>>>> parent of ab485c7... Table 1 displayed ok
 
-     echo '<TABLE class="table"  border="2">';
-     echo '<TR>';
-     
-      foreach($stmt as $row)
-      {
-        //echo '<li>'.$row['match_date'].' '.$row['team1_name'].' '.$row['team2_name'].'</li>';
-   
-    echo "<tr><td>{$row['match_date']}&nbsp</td><td>{$row['team1_name']}</td><td>{$row['team2_name']}</td>
-      <td>{$row['team1_score']}</td><td>{$row['team2_score']}</td></tr>"; 
-=======
->>>>>>> parent of 59addd1... przed zmianami w tabelach
 
       }
       $stmt->closeCursor();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      }
-      $stmt->closeCursor();
-
-=======
->>>>>>> parent of ab485c7... Table 1 displayed ok
      echo '</TR>';
      echo '</TABLE>';
    }
@@ -366,10 +262,6 @@
       echo 'Połączenie nie mogło zostać utworzone: ' . $e->getMessage();
    }
 ?>
-=======
-
-   
->>>>>>> parent of 59addd1... przed zmianami w tabelach
     
   </section>
 
