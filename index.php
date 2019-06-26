@@ -237,7 +237,7 @@
     $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $query = "SELECT match_date,team1_name,team2_name,team1_score,team2_score FROM matches";
   //first pass just gets the column names
-    print "<table > ";
+    print '<table class="table" border="2px"> ';
     $result = $con->query($query);
   //return only the first row (we only need field names)
     $row = $result->fetch(PDO::FETCH_ASSOC);
