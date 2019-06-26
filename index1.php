@@ -41,6 +41,7 @@
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112771295-1"></script>
+<<<<<<< HEAD
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -187,6 +188,33 @@
 <<<<<<< HEAD:index.php
    <?php
 
+=======
+  
+</head>
+
+<body>
+    <h2>OTO DANE:</h2>
+    <div>
+      
+ 
+ <?php
+    echo "<table style='border: solid 1px black;'>";
+		echo "<tr><th>Team_Id</th><th>Team</th><th>Played</th><th>Lost</th><th>Won</th><th>Points</th></tr>";
+		class TableRows1 extends RecursiveIteratorIterator { 
+		     function __construct($it) { 
+		         parent::__construct($it, self::LEAVES_ONLY); 
+		     }
+		     function current() {
+		         return "<td style='width: 150px; border: 1px solid black;'>" . parent::current(). "</td>";
+		     }
+		     function beginChildren() { 
+		         echo "<tr>"; 
+		     } 
+		     function endChildren() { 
+		         echo "</tr>" . "\n";
+		     } 
+		 }
+>>>>>>> parent of 59addd1... przed zmianami w tabelach
    try
    {
       $pdo = new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
@@ -206,7 +234,10 @@
       }
       $stmt->closeCursor();
 
+<<<<<<< HEAD
      
+=======
+>>>>>>> parent of 59addd1... przed zmianami w tabelach
      echo '</TABLE>';
    }
    catch(PDOException $e)
@@ -214,6 +245,7 @@
       echo 'Połączenie nie mogło zostać utworzone: ' . $e->getMessage();
    }
 ?>
+<<<<<<< HEAD
 =======
 >>>>>>> master:index1.php
       <div>
@@ -699,6 +731,48 @@
       marker.setMap(map);
     }
   </script>
+=======
+
+<?php
+		echo "<table style='border: solid 1px black;'>";
+		echo "<tr><th>Id</th><th>Date</th><th>Team1</th><th>Team2</th><th>Score Team1</th><th>Score Team2</th></tr>";
+		class TableRows extends RecursiveIteratorIterator { 
+		     function __construct($it) { 
+		         parent::__construct($it, self::LEAVES_ONLY); 
+		     }
+		     function current() {
+		         return "<td style='width: 150px; border: 1px solid black;'>" . parent::current(). "</td>";
+		     }
+		     function beginChildren() { 
+		         echo "<tr>"; 
+		     } 
+		     function endChildren() { 
+		         echo "</tr>" . "\n";
+		     } 
+		 }
+		     
+			
+		try {
+			     
+			     
+			     $stmt = $pdo->prepare("SELECT * FROM matches"); 
+			     $stmt->execute();
+			     // set the resulting array to associative
+			     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC); 
+			     foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) { 
+			         echo $v;
+			     }
+			}
+			catch(PDOException $e) {
+			     echo "Error: " . $e->getMessage();
+			}
+			$conn = null;
+			echo "</table>";
+				?>
+
+
+    </div>
+>>>>>>> parent of 59addd1... przed zmianami w tabelach
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp5-_DaBgWKUbg34oVgi4QSIKXJ5YC_aI&callback=myMap"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"

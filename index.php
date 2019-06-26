@@ -95,10 +95,7 @@
       </div>
     </div>
   </nav>
-<<<<<<< HEAD
 
-=======
->>>>>>> FixSlides
   <!-- Header section -->
     <header id="header">
       <div class="mySlides">
@@ -178,14 +175,20 @@
  <div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 59addd1... przed zmianami w tabelach
 
 <<<<<<< HEAD
 	
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> parent of ab485c7... Table 1 displayed ok
 =======
 >>>>>>> parent of ab485c7... Table 1 displayed ok
+=======
+>>>>>>> parent of 59addd1... przed zmianami w tabelach
    <?php
 
         
@@ -250,6 +253,9 @@
     <h1>MATCHES</h1>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 59addd1... przed zmianami w tabelach
 <?php
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -300,9 +306,8 @@
       echo "</table>";
       */
 				?>
-=======
-   <?php
 
+<<<<<<< HEAD
    try
    {
       $pdo = new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
@@ -340,10 +345,13 @@
    
     echo "<tr><td>{$row['match_date']}&nbsp</td><td>{$row['team1_name']}</td><td>{$row['team2_name']}</td>
       <td>{$row['team1_score']}</td><td>{$row['team2_score']}</td></tr>"; 
+=======
+>>>>>>> parent of 59addd1... przed zmianami w tabelach
 
       }
       $stmt->closeCursor();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
       $stmt->closeCursor();
@@ -358,6 +366,10 @@
       echo 'Połączenie nie mogło zostać utworzone: ' . $e->getMessage();
    }
 ?>
+=======
+
+   
+>>>>>>> parent of 59addd1... przed zmianami w tabelach
     
   </section>
 
