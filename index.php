@@ -156,7 +156,12 @@
                     <img src="img/club-sec/werrington-centre.jpg" class="img-fluid" alt="Responsive-image">
                    <figcaption>First base of Werrington United Team</figcaption>
                   </figure>
-                  
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+
            </div>
         </div>
       </div>
@@ -177,34 +182,38 @@
       </h1>
  <div>
    <?php
+ try {
+    $con= new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
+    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query = "SELECT team_id as no, team_name as team, played, lost, won, points FROM `teams`";
+  //first pass just gets the column names
+    print '<table class="table" border="2px"> ';
+    $result = $con->query($query);
+  //return only the first row (we only need field names)
+    $row = $result->fetch(PDO::FETCH_ASSOC);
+      print " <tr>";
+    foreach ($row as $field => $value){
+      print " <th>$field</th>";
+    } // end foreach
+      print " </tr>";
+    //second query gets the data
+      $data = $con->query($query);
+      $data->setFetchMode(PDO::FETCH_ASSOC);
+    foreach($data as $row){
+        print " <tr>";
+      foreach ($row as $name=>$value){
+          print " <td>$value</td>";
+       } // end field loop
+      print " </tr>";
+    } // end record loop
+    print "</table>";
+ }
+ catch(PDOException $e) {
+   echo 'ERROR: ' . $e->getMessage();
+ } // end try
  
-   try
-   {
-      $pdo = new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
-      $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      
-      $stmt = $pdo->query('SELECT team_id as no, team_name as team, played, lost, won, points FROM `teams` ');
-
-     echo '<TABLE class="table"  border="2">';
-          
-      foreach($stmt as $row)
-      {
-        //echo '<li>'.$row['match_date'].' '.$row['team1_name'].' '.$row['team2_name'].'</li>';
-     
-    echo "<tr><td>{$row['no']}&nbsp</td><td>{$row['team']}</td><td>{$row['played']}</td>
-      <td>{$row['lost']}</td><td>{$row['won']}</td><td>{$row['points']}</td></tr>"; 
-
-      }
-      $stmt->closeCursor();
-
-     
-     echo '</TABLE>';
-   }
-   catch(PDOException $e)
-   {
-      echo 'Połączenie nie mogło zostać utworzone: ' . $e->getMessage();
-   }
 ?>
+  
  </div>
       <div>
         <br>
@@ -263,7 +272,10 @@
  } // end try
  
 ?>
-    
+    <br>
+    <br>
+    <br>
+    <br>
   </section>
 
 
