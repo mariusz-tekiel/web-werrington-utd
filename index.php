@@ -1,3 +1,12 @@
+<?php
+	session_start();
+	
+	if ((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true))
+	{
+		header('Location: editTables.php');
+		exit();
+	}
+?>
 <!DOCTYPE html>
 <html class="no-js" lang="en" prefix="og: http://ogp.me/ns#">
 
@@ -54,13 +63,7 @@
 
 </head>
 
-<body>
-  <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser.
-        Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your
-        experience.</p>
-    <![endif]-->
-
+<body>  
   <!-- Navbar section -->
   <nav class="navBar" id="navbar">
     <div class="navbar navbar-expand-md">
