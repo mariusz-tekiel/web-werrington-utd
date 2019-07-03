@@ -3,7 +3,7 @@
 	
 	if ((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true))
 	{
-		header('Location: index.php');
+		header('Location: editTables.php');
 		exit();
 	}
 ?>
@@ -18,7 +18,9 @@
 <body>	
 	"Only members of club are able to log in"<br /><br />
 	
-	<form action="editTables.php" method="post">
+	
+	
+	<form action="zaloguj.php" method="post">
 	
 		Login: <br /> <input type="text" name="login" /> <br />
 		Password: <br /> <input type="password" name="haslo" /> <br /><br />
@@ -28,10 +30,7 @@
 	
 <?php
 	if(isset($_SESSION['blad']))
-		  echo $_SESSION['blad'];
-		  require_once"connect.php";
-	
-	
+  		echo $_SESSION['blad'];
 ?>
 
 </body>
