@@ -28,7 +28,8 @@
 		{
 			$login = $_POST['login'];
 			$haslo = $_POST['haslo'];
-			
+            
+            
 			//$login = htmlentities($login,ENT_QUOTES,"UTF-8");
 			$rezultat = $polaczenie->query("SELECT * FROM users WHERE user='%s'");
 			
