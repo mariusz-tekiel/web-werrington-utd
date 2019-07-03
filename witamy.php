@@ -38,7 +38,7 @@
 	
 	Thank you for registration in our service. You can already login to your account!<br /><br />
 	
-	<a href="index.php">Zaloguj sie na swoje konto!</a>
+	<a href="index-new.php">Zaloguj sie na swoje konto!</a>
 	<br /><br />
 	
 

@@ -140,11 +140,8 @@
 			
 			//dziala na czas tworzenia aplikacji, a w wersji developerskiej w komentarz
 			echo '<br/>Informacja developerska: '.$e;
-			
 		}
-				
 	}
-		
 ?>
 <!DOCTYPE HTML>
 <html lang="pl">
@@ -256,12 +253,6 @@
 		
 		<br/><input type="Submit" value="Registrate" />	
 	
-	
 	</form>
-	
-	
-	
-
-
-</body>
+  </body>
 </html>

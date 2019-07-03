@@ -3,9 +3,9 @@
 	
 	if((!isset($_POST['login'])) || (!isset($_POST['haslo'])))
 	{
-		header('Location:index-new.php');
+        
+        header('Location:index-new.php');
 		exit();	
-		
 	}
 	
 	require_once"connect.php";
@@ -28,9 +28,7 @@
 		{
 			$login = $_POST['login'];
 			$haslo = $_POST['haslo'];
-            
-            
-			//$login = htmlentities($login,ENT_QUOTES,"UTF-8");
+          	//$login = htmlentities($login,ENT_QUOTES,"UTF-8");
 			$rezultat = $polaczenie->query("SELECT * FROM users WHERE user='%s'");
 			
 			if(!$rezultat) throw new Exception($polaczenie->error);				
@@ -39,18 +37,15 @@
 				sprintf("SELECT * FROM users WHERE user='%s'",
 				mysqli_real_escape_string($polaczenie,$login))))
 			{
+                
 				$ilu_userow = $rezultat->num_rows;
 				if($ilu_userow>0)
 				{
 					$wiersz = $rezultat->fetch_assoc();//tablica ze slownym indexem
 					if(password_verify($haslo,$wiersz['pass']))
 					{
-						
 						$_SESSION['zalogowany'] = true;
-								
-						
 						$_SESSION['id'] = $wiersz['id'];
-						
 						$_SESSION['user'] = $wiersz['user'];
 						$_SESSION['drewno'] = $wiersz['drewno'];
 						$_SESSION['kamien'] = $wiersz['kamien'];
@@ -79,8 +74,6 @@
 					$_SESSION['blad'] = '<span style="color:red">Nie prawidlowy login lub haslo!</span>';
 					header("Location:index-new.php");
 				}
-
-				
 			}
 			$polaczenie->close();
 		}
@@ -92,7 +85,4 @@
 			//dziala na czas tworzenia aplikacji, a w wersji developerskiej w komentarz
 			echo '<br/>Informacja developerska: '.$e;
 	}
-	
-		
-
 ?>
