@@ -3,22 +3,23 @@
 	
 	if ((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true))
 	{
-		header('Location: editTables.php');
+		header('Location: gra.php');
 		exit();
 	}
 ?>
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="pl">
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Login</title>
+	<title>Osadnicy - gra przegladarkowa</title>
 </head>
 
 <body>	
-	"Only members of club are able to log in"<br /><br />
+	"Only the dead have seen end of the war." - Platon<br /><br />
 	
-	
+	<a href="rejestracja.php">Registration - create free account!</a>
+	<br /><br />
 	
 	<form action="zaloguj.php" method="post">
 	
