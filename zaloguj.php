@@ -3,7 +3,7 @@
 	
 	if((!isset($_POST['login'])) || (!isset($_POST['haslo'])))
 	{
-		header('Location:index.php');
+		header('Location:index-new.php');
 		exit();	
 		
 	}
@@ -30,12 +30,12 @@
 			$haslo = $_POST['haslo'];
 			
 			//$login = htmlentities($login,ENT_QUOTES,"UTF-8");
-			$rezultat = $polaczenie->query("SELECT * FROM uzytkownicy WHERE user='%s'");
+			$rezultat = $polaczenie->query("SELECT * FROM users WHERE user='%s'");
 			
 			if(!$rezultat) throw new Exception($polaczenie->error);				
 			
 			if ($rezultat = @$polaczenie->query(
-				sprintf("SELECT * FROM uzytkownicy WHERE user='%s'",
+				sprintf("SELECT * FROM users WHERE user='%s'",
 				mysqli_real_escape_string($polaczenie,$login))))
 			{
 				$ilu_userow = $rezultat->num_rows;
@@ -66,7 +66,7 @@
 					else
 					{
 						$_SESSION['blad'] = '<span style="color:red">Nie prawidlowy login lub haslo!</span>';
-						header("Location:index.php");
+						header("Location:index-new.php");
 					}
 
 					
@@ -76,7 +76,7 @@
 				else
 				{
 					$_SESSION['blad'] = '<span style="color:red">Nie prawidlowy login lub haslo!</span>';
-					header("Location:index.php");
+					header("Location:index-new.php");
 				}
 
 				

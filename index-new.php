@@ -16,7 +16,7 @@
 </head>
 
 <body>	
-	"Only the dead have seen end of the war." - Platon<br /><br />
+	Registragion only for members of club! <br /><br />
 	
 	<a href="rejestracja.php">Registration - create free account!</a>
 	<br /><br />

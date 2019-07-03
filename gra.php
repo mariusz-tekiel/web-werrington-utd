@@ -17,7 +17,7 @@
 </head>
 
 <body>
-	
+    <h2>Oto wyniki</h2>
 <?php
 		echo "<p>Witaj ".$_SESSION['user'].'![<a href="logout.php">Wyloguj sie!</a>]<p>';   	
 		
