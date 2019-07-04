@@ -97,10 +97,6 @@
       </div>
     </div>
   </nav>
-<<<<<<< HEAD
-
-=======
->>>>>>> FixSlides
   <!-- Header section -->
     <header id="header">
       <div class="mySlides">
