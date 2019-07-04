@@ -183,7 +183,7 @@
  try {
     $con= new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
     $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $query = "SELECT team_id as no, team_name as team, played, lost, won, points FROM `teams`";
+    $query = "SELECT team_id as NO, team_name as TEAM, played as PLAYED, lost as LOST, won as WON, points as POINTS FROM `teams`";
   //first pass just gets the column names
     print '<table class="table" border="2px"> ';
     $result = $con->query($query);
@@ -242,7 +242,7 @@
  try {
     $con= new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
     $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $query = "SELECT match_date,team1_name,team2_name,team1_score,team2_score FROM matches";
+    $query = "SELECT match_date as MATCH_DATE,team1_name as HOME_TEAM,team2_name as GUEST_TEAM,team1_score as HT_SCORE,team2_score as GT_SCORE FROM matches";
   //first pass just gets the column names
     print '<table class="table" border="2px"> ';
     $result = $con->query($query);
