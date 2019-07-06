@@ -1,0 +1,17 @@
+.container {
+  margin: auto;
+  text-align: center;
+}
+form {
+  text-align: center;
+}
+
+.not-active {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: rgb(161, 156, 156);
+}
+.login-window {
+  margin: auto;
+}
