@@ -1,4 +1,5 @@
 <?php
+		session_start();
 
 		require_once "connect.php";
 		
@@ -18,12 +19,22 @@
 				$ilu_userow = $rezultat->num_rows;
 				if($ilu_userow>0){
 					$wiersz = $rezultat->fetch_assoc();
-					$user = $wiersz['user'];
+					$_SESSION['user'] = $wiersz['user'];
+					$_SESSION['drewno'] = $wiersz['drewno'];
+					$_SESSION['kamien'] = $wiersz['kamien'];
+					$_SESSION['zboze'] = $wiersz['zboze'];
+					$_SESSION['email'] = $wiersz['email'];
+					$_SESSION['dnipremium'] = $wiersz['dnipremium'];
 
+					//Jesli udalo nam sie zalogowac to usunmy z sesji zmienna blad
+					unset($_SESSION['blad']);
+					
 					$rezultat->free_result();
-					echo $user;
-				} else {
+					header('Location: gra.php');
 
+				} else {
+					$_SESSION['blad'] = '<span style="color:red">Login or password is not correct!</span>';
+					header('Location: index-new.php');
 				}
 			}
 

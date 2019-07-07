@@ -1,3 +1,6 @@
+<?php
+	session_start();
+ ?>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -20,27 +23,16 @@
 			
 				Login: <br /> <input type="text" name="login" /> <br />
 				Password: <br /> <input type="password" name="haslo" /> <br /><br />
-				<input type="submit" value="Zaloguj" name="log_in"/>
+				<input type="submit" value="Login" name="log_in"/>
 			
 			</form>
 			<br>
-					
 			<?php
-				echo '<pre>';
-				if( isset($_GET['error'])){
-						switch($_GET['error']){
-							case 0: echo '<span style="color:red">Log in please</span>';break;
-							case 1: echo '<span style="color:red">Fill in all text fields</span>';break;
-						}
-				}
-				echo '</pre>';
+				if(isset($_SESSION['blad'])) echo $_SESSION['blad'];
+			
 			?>
 		</div>	
 	</div>
-<?php
-	if(isset($_SESSION['blad']))
-  		echo $_SESSION['blad'];
-?>
 
 </body>
 </html>
