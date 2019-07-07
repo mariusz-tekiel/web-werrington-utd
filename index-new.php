@@ -16,7 +16,7 @@
 			<br>
 			<br>
 			
-			<form action="logowanie.php" method="post">
+			<form action="zaloguj.php" method="post">
 			
 				Login: <br /> <input type="text" name="login" /> <br />
 				Password: <br /> <input type="password" name="haslo" /> <br /><br />

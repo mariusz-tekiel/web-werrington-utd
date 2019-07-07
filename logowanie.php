@@ -23,7 +23,7 @@
 		}
 		else
 		{
-            echo "ok";
+            echo 'ok';
             $wynik = $db->query("SELECT * FROM users WHERE 'login'*'$login'") or die("Downloading data not successful!");
             $rows = $wynik->fetch_assoc();
             echo $rows['login'];
