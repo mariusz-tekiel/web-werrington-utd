@@ -1,3 +1,8 @@
+body {
+  background-color: rgb(22, 25, 53);
+  color: white;
+}
+
 .container {
   margin: auto;
   text-align: center;
