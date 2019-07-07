@@ -1,6 +1,11 @@
 <?php
 		session_start();
 
+		if((!isset($_POST['login'])) || (!isset($_POST['haslo']))){
+			header('Location: index.php');
+			exit();
+		}
+
 		require_once "connect.php";
 		
 		$polaczenie = @new mysqli($host,$db_user,$db_password,$db_name);
@@ -18,7 +23,10 @@
 			if($rezultat = @$polaczenie->query($sql)){
 				$ilu_userow = $rezultat->num_rows;
 				if($ilu_userow>0){
+					$_SESSION['zalogowany']=true;
+
 					$wiersz = $rezultat->fetch_assoc();
+					$_SESSION['id'] = $wiersz['id'];
 					$_SESSION['user'] = $wiersz['user'];
 					$_SESSION['drewno'] = $wiersz['drewno'];
 					$_SESSION['kamien'] = $wiersz['kamien'];
@@ -38,8 +46,6 @@
 				}
 			}
 
-
-			echo "<br/><br/>It works";
 			$polaczenie->close();
 
 		}
