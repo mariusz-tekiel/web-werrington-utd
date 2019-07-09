@@ -46,7 +46,7 @@
 						unset($_SESSION['blad']);
 						
 						$rezultat->free_result();
-						header('Location: gra.php');
+						header('Location: tableEditor.php');
 
 				} else {
 					$_SESSION['blad'] = '<span style="color:red">Login or password is not correct!</span>';

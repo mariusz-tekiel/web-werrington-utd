@@ -6,11 +6,11 @@
 	}
 ?>
 <!DOCTYPE HTML>
-<html lang="pl">
+<html lang="en">
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Show user data</title>
+	<title>Table editor</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 		
 		echo "<p>Witaj ".$_SESSION['user'].'![<a href="logout.php">Logout</a>]</p>';
 
-		echo 'Jesteś zalogowany<br><br>';
+		echo 'Jesteś zalogowany. Cool!<br><br>';
 		echo "<b>Drewno: </b> ".$_SESSION['drewno'];
 		echo "| <b>Kamien: </b> ".$_SESSION['kamien'];
 		echo "| <b>Zboze: </b> ".$_SESSION['zboze'];
