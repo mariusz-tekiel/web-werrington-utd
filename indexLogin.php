@@ -1,6 +1,6 @@
 <?php
 	session_start();
-
+	$_SESSION['zalogowany']=false;
 	if((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true)){
 		header('Location: gra.php');
 		exit();

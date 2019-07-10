@@ -1,46 +1,13 @@
 <?php
 session_start();
-
-require_once 'database.php';
-
-if(!isset($_SESSION['logged_id'])){
-	
-	if(isset($_POST['login'])){
-		
-		$login = filter_input(INPUT_POST,'login');
-		$password = filter_input(INPUT_POST,'pass');
-		
-		//echo $login." ".$password;
-		
-		
-		$userQuery = $db->prepare('SELECT id,password FROM admins WHERE login = :login');
-		$userQuery->bindValue(':login',$login, PDO::PARAM_STR);
-		$userQuery->execute();
-		
-		//echo $userQuery->rowCount();
-		$user = $userQuery->fetch();
-		//echo $user['id']." ".$user['password'];
-		
-		if($user && password_verify($password,$user['password'])){
-			$_SESSION['logged_id'] = $user['id'];
-			unset($_SESSION['bad_attempt']);
-		} else {
-			$_SESSION['bad_attempt']  = true;
-			header('Location: admin.php');
-			exit();
-		}
-		
-	} else {
-		header('Location: admin.php');
-			exit();
-			
-	}
+if (isset($_POST['login'])){
+	$login = filter_input(INPUT_POST,'login');
+	$login = filter_input(INPUT_POST,'haslo');
+	echo $login. " " .$haslo;
+}else{
+	header('Location: index-new.php');
+	exit();
 }
-
-$usersQuery = $db->query('SELECT * FROM users');
-$users = $usersQuery->fetchAll();
-//echo $usersQuery;
-//print_r($users);
 
 ?>
 <!DOCTYPE html>

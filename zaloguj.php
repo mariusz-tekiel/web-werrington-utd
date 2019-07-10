@@ -1,6 +1,6 @@
 <?php
 		session_start();
-
+		
 		if((!isset($_POST['login'])) || (!isset($_POST['haslo']))){
 			header('Location: index.php');
 			exit();
@@ -50,7 +50,8 @@
 
 				} else {
 					$_SESSION['blad'] = '<span style="color:red">Login or password is not correct!</span>';
-					header('Location: index-new.php');
+					$_SESSION['zalogowany']=false;
+					header('Location: indexLogin.php');
 				}
 			}
 
