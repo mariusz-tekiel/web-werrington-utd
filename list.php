@@ -1,17 +1,41 @@
 <?php
 session_start();
-if (isset($_POST['login'])){
-	$login = filter_input(INPUT_POST,'login');
-	$login = filter_input(INPUT_POST,'haslo');
-	echo $login. " " .$haslo;
-}else{
-	header('Location: index-new.php');
-	exit();
-}
+require_once 'database.php';
 
+if(!isset($_SESSION['logged_id'])){
+
+	if (isset($_POST['login'])){
+		$login = filter_input(INPUT_POST,'login');
+		$password = filter_input(INPUT_POST,'haslo');
+		//echo $login. " " .$haslo;
+		
+		$userQuery = $db->prepare('SELECT id,pass FROM users WHERE user = :login');
+		$userQuery->bindValue(':login',$login,PDO::PARAM_STR);
+		$userQuery->execute();
+
+		//echo $userQuery->rowCount();
+
+		$user = $userQuery->fetch();
+		echo $user['id'] . " " . $user['pass'];
+
+		if($user && password_verify($haslo, $user['pass'])){
+
+		}else{
+			$_SESSION['logged_id'] = $user['id'];	
+			unset($_SESSION['bad_attempt']);
+		}
+
+	}else{
+		$_SESSION['bad_attempt']=true;
+		header('Location: indexLogin.php');
+		exit();
+	}
+
+	$usersQuery = $db->query('SELECT * FROM users');
+}
 ?>
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Panel administracyjny</title>
@@ -38,8 +62,8 @@ if (isset($_POST['login'])){
             <article>
 				<table>
 					<thead>
-						<tr><th collspan="2">Lacznie rekordow: <?= $usersQuery->rowCount() ?></th></tr>
-						<tr><th>ID</th><th>E-mail</th></tr>	
+					<!--	<tr><th collspan="2">Lacznie rekordow: <?= $usersQuery->rowCount() ?></th></tr>
+						<tr><th>ID</th><th>E-mail</th></tr>	 -->
 					</thead>
 					<tbody>
 						<?php
