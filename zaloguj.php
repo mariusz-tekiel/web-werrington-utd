@@ -18,7 +18,7 @@
 			$login = $_POST['login'];
 			$haslo = $_POST['haslo'];
 
-			//zabezpieczenie przed wstrzykiwaniem
+			//zabezpieczenie przed wstrzykiwaniem sql
 			$login = htmlentities($login,ENT_QUOTES,"UTF-8");
 			$haslo = htmlentities($haslo,ENT_QUOTES,"UTF-8");
 
