@@ -54,10 +54,6 @@
 					header('Location: indexLogin.php');
 				}
 			}
-
 			$polaczenie->close();
-
-		}
-
-		
+		}	
 ?>
