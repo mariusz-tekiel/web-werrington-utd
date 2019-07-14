@@ -11,6 +11,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="stylesheet" href="css/tableEditor.css">
 	<title>Table editor</title>
 </head>
 
@@ -24,10 +25,27 @@
 	?>
 
 </header>
-<section class = "table">
+<section class = "table" id="table1">
 	<h2>TABLE TEAMS EDITOR</h2>
 	<br>
-
+	<form action="/tableEditor.php" class="form-inline">
+		<label for="teamName">Team name:</label><br>
+		<input type="text" id="teamName" class="input-w" name="teamName" value=""><br>
+		Matches played:<br>
+		<input type="text" name="played" value=""><br>
+		Matches lost:<br>
+		<input type="text" name="lost" value=""><br>
+		Matches won:<br>
+		<input type="text" name="won" value=""><br>
+		Points:<br>
+		<input type="text" name="points" value=""><br>
+		
+		<br>
+		<input type="submit" value="Add new team">
+		<br>
+		<br>
+		
+	</form>
 	<?php
 	try {
 		$con= new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
@@ -63,7 +81,7 @@
 	<hr>
 </section>
 
-<section class="table">
+<section class="table" id="table2">
 	<h2>TABLE MATCHES EDITOR</h2>
 	<br>
 	<?php
