@@ -60,6 +60,7 @@
 	} // end try
 	
 	?>
+	<hr>
 </section>
 
 <section class="table">
