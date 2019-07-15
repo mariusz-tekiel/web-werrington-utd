@@ -11,9 +11,11 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
     crossorigin="anonymous">
 	<link rel="stylesheet" href="css/tableEditor.css">
+
 	<title>Table editor</title>
 </head>
 
@@ -27,9 +29,10 @@
 	?>
 
 </header>
-<section class = "table" id="table1">
+<section class = "table">
 	<h2>TABLE TEAMS EDITOR</h2>
 	<br>
+
 	<form action="/tableEditor.php" class="form-inline">
 		<label for="teamName">Team name:</label><br>
 		<input type="text" id="teamName" class="input-w" name="teamName" value=""><br>
@@ -80,10 +83,9 @@
 			</tbody>
 		</table>
 
+	<?php
+	try {
 
-
-
-/*	try {
 		$con= new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
 		$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$query = "SELECT team_id as NO, team_name as TEAM, played as PLAYED, lost as LOST, won as WON, points as POINTS FROM `teams`";
@@ -117,7 +119,7 @@
 	<hr>
 </section>
 
-<section class="table" id="table2">
+<section class="table">
 	<h2>TABLE MATCHES EDITOR</h2>
 	<br>
 	<?php
