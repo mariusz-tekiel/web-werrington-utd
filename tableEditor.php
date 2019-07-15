@@ -11,6 +11,8 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+    crossorigin="anonymous">
 	<link rel="stylesheet" href="css/tableEditor.css">
 	<title>Table editor</title>
 </head>
@@ -46,8 +48,42 @@
 		<br>
 		
 	</form>
-	<?php
-	try {
+  <?php
+	
+		include_once("config.php");
+		$conn = @new mysqli('localhost','root','','werrington');
+		$sqlQuery = "SELECT team_id as NO, team_name as TEAM, played as PLAYED, lost as LOST, won as WON, points as POINTS FROM `teams`";
+		$resultSet = mysqli_query($conn, $sqlQuery) or die("database error:". mysqli_error($conn));
+		?>
+		<table id="editableTable" class="table table-bordered">
+			<thead>
+				<tr>
+					<th>NO</th>
+					<th>Team</th>
+					<th>Played</th>
+					<th>Lost</th>	
+					<th>Won</th>												
+					<th>Points</th>												
+				</tr>
+			</thead>
+			<tbody>
+				<?php while( $developer = mysqli_fetch_assoc($resultSet) ) { ?>
+				<tr id="<?php echo $developer ['NO']; ?>">
+				<td><?php echo $developer ['NO']; ?></td>
+				<td><?php echo $developer ['TEAM']; ?></td>
+				<td><?php echo $developer ['PLAYED']; ?></td>
+				<td><?php echo $developer ['LOST']; ?></td>
+				<td><?php echo $developer ['WON']; ?></td>
+				<td><?php echo $developer ['POINTS']; ?></td>  				   				   				  
+				</tr>
+				<?php } ?>
+			</tbody>
+		</table>
+
+
+
+
+/*	try {
 		$con= new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
 		$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$query = "SELECT team_id as NO, team_name as TEAM, played as PLAYED, lost as LOST, won as WON, points as POINTS FROM `teams`";
@@ -75,7 +111,7 @@
 	}
 	catch(PDOException $e) {
 	echo 'ERROR: ' . $e->getMessage();
-	} // end try
+	} // end try */
 	
 	?>
 	<hr>
