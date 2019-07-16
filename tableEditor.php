@@ -77,13 +77,14 @@
   //oraz dokonuje przeliczenia numerów wierszy w tabeli
   $(".delete").live("click", function() {
     //znajdź najbliższy wiersz będący elementem nadrzędnym dla linka usuwającego ten wiersz
-    //i wykonaj animację
+	//i wykonaj animację
+	
     $(this)
       .closest("tr")
       .animate({ backgroundColor: "#EF3E23", color: "#fff" }, 300, function() {
         //usuń dany wiersz
-        $(this).remove();
-
+		$(this).remove();
+        		
         //aktualizuj numery pozostałych wierszy
         //dzięki temu gdy usuniemy wiersz w środku tabeli
         //to nie będzie istniała dziura w numeracji wierszy
@@ -132,11 +133,18 @@
 					<th>Lost</th>	
 					<th>Won</th>												
 					<th>Points</th>												
+					<th>Action</th>												
 				</tr>
 			</thead>
 			<tbody>
-				<?php while( $developer = mysqli_fetch_assoc($resultSet) ) { ?>
-					<tr id="<?php echo $developer ['NO']; ?>">
+				<?php 
+				
+				while( $developer = mysqli_fetch_assoc($resultSet) ) { 
+					
+				?>
+					
+					<tr id="<?php echo $developer ['NO'];										
+							?>">
 					<td><?php echo $developer ['NO']; ?></td>
 					<td><?php echo $developer ['TEAM']; ?></td>
 					<td><?php echo $developer ['PLAYED']; ?></td>
@@ -148,7 +156,7 @@
 				<?php } ?>
 			</tbody>
 		</table>
-
+					
 <table id="tabela">
 	<thead>
 		<tr>
