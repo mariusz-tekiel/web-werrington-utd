@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
     crossorigin="anonymous">
 	<link rel="stylesheet" href="css/tableEditor.css">
-	<script src="bootstable.js"></script>
+
 	<title>Table editor</title>
 </head>
 
@@ -32,7 +32,25 @@
 <section class = "table">
 	<h2>TABLE TEAMS EDITOR</h2>
 	<br>
-	
+
+	<form action="/tableEditor.php" class="form-inline">
+		<label for="teamName">Team name:</label><br>
+		<input type="text" id="teamName" class="input-w" name="teamName" value=""><br>
+		Matches played:<br>
+		<input type="text" name="played" value=""><br>
+		Matches lost:<br>
+		<input type="text" name="lost" value=""><br>
+		Matches won:<br>
+		<input type="text" name="won" value=""><br>
+		Points:<br>
+		<input type="text" name="points" value=""><br>
+		
+		<br>
+		<input type="submit" value="Add new team">
+		<br>
+		<br>
+		
+	</form>
   <?php
 	
 		include_once("config.php");
@@ -53,19 +71,51 @@
 			</thead>
 			<tbody>
 				<?php while( $developer = mysqli_fetch_assoc($resultSet) ) { ?>
-					<tr id="<?php echo $developer ['NO']; ?>">
-					<td><?php echo $developer ['NO']; ?></td>
-					<td><?php echo $developer ['TEAM']; ?></td>
-					<td><?php echo $developer ['PLAYED']; ?></td>
-					<td><?php echo $developer ['LOST']; ?></td>
-					<td><?php echo $developer ['WON']; ?></td>
-					<td><?php echo $developer ['POINTS']; ?></td>  				   				   				  
-					</tr>
+				<tr id="<?php echo $developer ['NO']; ?>">
+				<td><?php echo $developer ['NO']; ?></td>
+				<td><?php echo $developer ['TEAM']; ?></td>
+				<td><?php echo $developer ['PLAYED']; ?></td>
+				<td><?php echo $developer ['LOST']; ?></td>
+				<td><?php echo $developer ['WON']; ?></td>
+				<td><?php echo $developer ['POINTS']; ?></td>  				   				   				  
+				</tr>
 				<?php } ?>
 			</tbody>
 		</table>
 
+	<?php
+	try {
+
+		$con= new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
+		$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$query = "SELECT team_id as NO, team_name as TEAM, played as PLAYED, lost as LOST, won as WON, points as POINTS FROM `teams`";
+	//first pass just gets the column names
+		print '<table class="table" border="2px"> ';
+		$result = $con->query($query);
+	//return only the first row (we only need field names)
+		$row = $result->fetch(PDO::FETCH_ASSOC);
+		print " <tr>";
+		foreach ($row as $field => $value){
+		print " <th>$field</th>";
+		} // end foreach
+		print " </tr>";
+		//second query gets the data
+		$data = $con->query($query);
+		$data->setFetchMode(PDO::FETCH_ASSOC);
+		foreach($data as $row){
+			print " <tr>";
+		foreach ($row as $name=>$value){
+			print " <td>$value</td>";
+		} // end field loop
+		print " </tr>";
+		} // end record loop
+		print "</table>";
+	}
+	catch(PDOException $e) {
+	echo 'ERROR: ' . $e->getMessage();
+	} // end try */
 	
+	?>
 	<hr>
 </section>
 
