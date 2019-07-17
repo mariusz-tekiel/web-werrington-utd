@@ -41,7 +41,7 @@
     var f5 = '<td><input type="text" class="medium" name="points[]"/></td>';
 
     //szósta komórka
-    var f6 = '<td><a class="button delete" href="#">Usuń wiersz</a></td>';
+    var f6 = '<td><a class="button delete" href="#">Delete row</a></td>';
 
     //w tej zmiennej definiujemy nowy wiersz w tabeli
     var row =
@@ -116,7 +116,7 @@
 <section class = "table">
 	<h2>TABLE TEAMS EDITOR</h2>
 	<br>
-	<p><a href="#" id="dodajWiersz" class="add button">Dodaj nowy wiersz</a></p>
+	<p><a href="#" id="dodajWiersz" class="add button">Add new row</a></p>
 <?php
 	
 		include_once("config.php");
@@ -151,36 +151,17 @@
 					<td><?php echo $developer ['LOST']; ?></td>
 					<td><?php echo $developer ['WON']; ?></td>
 					<td><?php echo $developer ['POINTS']; ?></td>  
-					<td><a class="delete button" href="#">Usuń wiersz</a></td>				   				   				  
+					<td><a class="delete button" href="#">Delete row</a></td>				   				   				  
 					</tr>
 				<?php } ?>
 			</tbody>
 		</table>
-					
-<table id="tabela">
-	<thead>
-		<tr>
-			<th>Lp.</th>
-			<th>Nazwa</th>
-			<th>Typ</th>
-			<th>Akcje</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr id="wiersz-1">
-			<td>1</td>
-			<td>Pozycja 1</td>
-			<td>Typ 1</td>
-			<td><a class="delete button" href="#">Usuń wiersz</a></td>
-		</tr>
-		<tr id="wiersz-2">
-			<td>2</td>
-			<td>Pozycja 2</td>
-			<td>Typ 2</td>
-			<td><a class="delete button" href="#">Usuń wiersz</a></td>
-		</tr>
-	</tbody>
-</table>
+		<form action="deleteRecord.php" method="post">
+				Input number of row you wanna delete: <br /> <input type="text" name="id" /> <br />
+				<input type="submit" value="Delete" name="deleteButton"/>
+			
+		</form>			   				   				  
+
   <?php
 	
 		include_once("config.php");
@@ -188,7 +169,7 @@
 		$sqlQuery = "SELECT team_id as NO, team_name as TEAM, played as PLAYED, lost as LOST, won as WON, points as POINTS FROM `teams`";
 		$resultSet = mysqli_query($conn, $sqlQuery) or die("database error:". mysqli_error($conn));
 		?>
-		<table id="editableTable" class="table table-bordered">
+		<table id="editTable" class="table table-bordered">
 			<thead>
 				<tr>
 					<th>NO</th>
