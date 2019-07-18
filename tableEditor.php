@@ -25,10 +25,10 @@
 <body>
  <header>
 	<?php
-
-		echo '<a href="logout.php">Logout</a>';
-		echo "<p>Witaj ".$_SESSION['user'].'!</p>';
-		echo 'Jesteś zalogowany. Cool!<br><br>';
+		echo '<a href="logout.php"><input type="submit" value="LOGOUT" name="logout" /></a>';
+		//echo '<a href="logout.php"><< LOGOUT</a>';
+		echo "<h4>Welcome ".$_SESSION['user'].'! You are logged in.</h4>';
+		
 	?>
 
 </header>
@@ -92,7 +92,9 @@
 					 <td><input id="id" type="text" name="id"/> </td> 
 					 <td><label for="id"><<-- Input Record No To Delete</label> 	</td> 
 					 <td><input type="submit" value="Delete Record" name="deleteButton"/></td>
-					
+					 <td><label for="id"></label></td>
+					 <td><label for="id"></label></td>
+					 <td><label for="id"></label></td>
 				</form>			
 			</tr>
 			<tr>
@@ -100,8 +102,9 @@
 					 <td><input id="id" type="text" name="id"/> </td> 
 					 <td><label for="id"><<--Number to Change  &nbsp;  | &nbsp;  New No -->></label> 	</td> 
 					 <td><input id="new_id" type="text" name="new_id"/> </td> 
-					 <td><input type="submit" value="Change Record No " name="changeButton1"/></td>
-					
+					 <td><input type="submit" value="Change Record No " name="changeButton"/></td>
+					 <td><label for="id"></label></td>
+					 <td><label for="id"></label></td>
 				</form>			
 			</tr>
 		</table>
@@ -157,7 +160,7 @@
 				<?php } ?>
 			</tbody>
 			<tr>
-						<form action="addNewRow.php" method="post">
+						<form class="add" action="addNewRow.php" method="post">
 							<td> <input  type="submit" value="Add new record" name="addNew"/> </td>
 							<td> <input  type="text" name="match_date" /> </td>
 							<td> <input  type="text" name="home_team" /> </td>
@@ -173,7 +176,9 @@
 					 <td><input id="match_id" type="text" name="match_id"/> </td> 
 					 <td><label for="id"><<-- Input Record No To Delete</label> 	</td> 
 					 <td><input type="submit" value="Delete Record" name="deleteButton"/></td>
-					
+					 <td><label for="id"></label></td>
+					 <td><label for="id"></label></td>
+					 <td><label for="id"></label></td>
 				</form>			
 			</tr>
 			<tr>
@@ -181,8 +186,9 @@
 					 <td><input id="match_id" type="text" name="match_id"/> </td> 
 					 <td><label for="match_id"><<--Number to Change  &nbsp;  | &nbsp;  New No -->></label> 	</td> 
 					 <td><input id="new_match_id" type="text" name="new_match_id"/> </td> 
-					 <td><input type="submit" value="Change Record No " name="changeButton1"/></td>
-					
+					 <td><input type="submit" value="Change Record No " name="changeButton"/></td>
+					 <td><label for="id"></label></td>
+					 <td><label for="id"></label></td>
 				</form>			
 			</tr>
 		</table>

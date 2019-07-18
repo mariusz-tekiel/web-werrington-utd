@@ -49,7 +49,7 @@
 						header('Location: tableEditor.php');
 
 				} else {
-					$_SESSION['blad'] = '<span style="color:red">Login or password is not correct!</span>';
+					$_SESSION['blad'] = '<span style="color:red;font-size:18px;" >Login or password is not correct!</span>';
 					$_SESSION['zalogowany']=false;
 					header('Location: indexLogin.php');
 				}

@@ -5,8 +5,7 @@ require_once 'database.php';
 		header('Location: indexLogin.php');
 		exit();
     }
-       
-  
+    
     if(isset($_POST['id'])){
         include_once("config.php");
         $id = $_POST['id'];

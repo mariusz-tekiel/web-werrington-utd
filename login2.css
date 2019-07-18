@@ -1,25 +1,53 @@
 body {
-  background-color: rgb(199, 216, 194);
-  color: rgb(96, 94, 224);
+  /* Background pattern from subtlepatterns.com */
+  background-image: url("img/hexellence.png");
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #111;
+}
+
+a:link {
+  color: #36b03c;
+  text-decoration: none;
+}
+a:visited {
+  color: #36b03c;
+}
+a:active {
+  color: #36b03c;
+}
+a:hover {
+  color: #37b93d;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+  font-size: 64px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+p {
+  text-align: center;
 }
 
 .container {
-  margin: auto;
-  text-align: center;
-}
-form {
+  background-color: white;
+  width: 300px;
+  padding: 40px 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  -webkit-box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
+  -moz-box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
+  box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
   text-align: center;
 }
 
-.not-active {
-  pointer-events: none;
-  cursor: default;
-  text-decoration: none;
-  color: rgb(161, 156, 156);
-}
-.login-window {
-  margin: auto;
-}
 input[type="text"],
 input[type="email"],
 input[type="password"] {
@@ -35,6 +63,7 @@ input[type="password"] {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="submit"]:focus {
@@ -45,6 +74,7 @@ input[type="submit"]:focus {
   background-color: #e9f3e9;
   color: #428c42;
 }
+
 input[type="submit"] {
   width: 300px;
   background-color: #36b03c;
@@ -74,11 +104,4 @@ td {
   border: 1px solid black;
   padding: 5px;
   width: 100%;
-}
-a {
-  font-size: 18px;
-}
-label {
-  color: rgb(28, 53, 29);
-  font-size: 18px;
 }

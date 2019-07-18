@@ -20,14 +20,14 @@
 		<div class="login-window">
 			<a href="rejestracja.php" class="not-active">Registration - create free account!</a>
 			<br />
-			Registration only for members of club! 
+			<h3>Registration only for members of club! </h3>
 			<br>
 			<br>
 			
 			<form action="zaloguj.php" method="post">
 			
-				Login: <br /> <input type="text" name="login" /> <br />
-				Password: <br /> <input type="password" name="haslo" /> <br /><br />
+				<label for="">Login:</label> <br /> <input type="text" name="login" /> <br />
+				<label for="">Password:</label><br /> <input type="password" name="haslo" /> <br /><br />
 				<input type="submit" value="Login" name="log_in"/>
 			
 			</form>

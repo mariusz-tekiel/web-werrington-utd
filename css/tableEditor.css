@@ -1,3 +1,66 @@
-form {
+body {
+  font: 14px Arial, Helvetica, sans-serif;
+  background-color: antiquewhite;
+}
+tr form {
   display: flex;
+}
+table {
+  border-collapse: collapse;
+}
+table td {
+  border: 1px solid #2d4f5c;
+  border-bottom-color: #6f77df;
+  border-left-color: #202a2e;
+  background: #dff7ff;
+}
+table th {
+  border: 1px solid #253a42;
+  background: #1d7d9f;
+  color: white;
+}
+
+input {
+  font-size: 14px;
+  border: 1px solid #0e242c;
+}
+
+input[name="addNew"] {
+  width: 150px;
+  height: 30px;
+  background-color: #36b03c;
+  color: white;
+  border-radius: 5px;
+}
+input[name="deleteButton"] {
+  width: 150px;
+  height: 30px;
+  background-color: #fa621b;
+  color: white;
+  border-radius: 5px;
+}
+input[name="changeButton"] {
+  width: 150px;
+  height: 30px;
+  background-color: #1b74fa;
+  color: white;
+  border-radius: 5px;
+}
+input[name="logout"] {
+  width: 150px;
+  height: 30px;
+  background-color: #faeb1b;
+  border-radius: 5px;
+}
+h2 {
+  text-align: center;
+}
+a {
+  font-size: 20px;
+  color: rgb(0, 89, 255);
+}
+h4 {
+  font-size: 16px;
+  color: green;
+  text-align: center;
 }
