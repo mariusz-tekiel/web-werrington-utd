@@ -56,7 +56,7 @@
       f4 +
       f5 +
       f6 +
-      
+	  
       "</tr>";
 
     //dołącz nowy wiersz na końcu tabeli
