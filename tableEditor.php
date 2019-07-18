@@ -179,7 +179,7 @@
 			<tr>
 				<form action="setNumber.php" method="post">
 					 <td><input id="match_id" type="text" name="match_id"/> </td> 
-					 <td><label for="id"><<--Number to Change  &nbsp;  | &nbsp;  New No -->></label> 	</td> 
+					 <td><label for="match_id"><<--Number to Change  &nbsp;  | &nbsp;  New No -->></label> 	</td> 
 					 <td><input id="new_match_id" type="text" name="new_match_id"/> </td> 
 					 <td><input type="submit" value="Change Record No " name="changeButton1"/></td>
 					
