@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en" prefix="og: http://ogp.me/ns#">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -16,8 +16,8 @@
   <!-- Open Graph data -->
   <meta property="og:title" content="Volleyball Club" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="http://www.sporthouse.md/" />
-  <meta property="og:image" content="http://www.sporthouse.md/og/example-og.png" />
+
+  
   <meta property="og:description" content="Volleyball Team" />
   <meta property="og:site_name" content="Werrington Utd" />
 
@@ -34,9 +34,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/scheduleStyle.css">
-  <link rel="stylesheet" href="css/galleryStyle.css">
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -64,7 +61,7 @@
   <!-- Navbar section -->
   <nav class="navBar" id="navbar">
     <div class="navbar navbar-expand-md">
-      <a href="http://www.sporthouse.md/">
+      <a href="">
         <img alt="sporthouse" class="logo" src="img/logo.png">
       </a>
 
@@ -334,7 +331,7 @@
   <!-- Scripts -->
   <script>
     function myMap() {
-      var myCenter = new google.maps.LatLng(47.042466, 28.760946);
+      var myCenter = new google.maps.LatLng(52.6201983,-0.2784895);
       var mapCanvas = document.getElementById("googleMap");
       var mapOptions = {
         center: myCenter,
