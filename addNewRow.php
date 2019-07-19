@@ -40,4 +40,5 @@ require_once 'database.php';
 		
 	} 
 	header('Location: tableEditor.php'); 
+	
 ?>

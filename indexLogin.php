@@ -2,7 +2,7 @@
 	session_start();
 	$_SESSION['zalogowany']=false;
 	if((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true)){
-		header('Location: gra.php');
+		header('Location: tableEditor.php');
 		exit();
 	}
  ?>

@@ -88,10 +88,10 @@
 			</tr>
 			<tr>
 				<form action="deleteRecord.php" method="post">
-					
-					 <td><input id="id" type="text" name="id"/> </td> 
-					 <td><label for="id"><<-- Input Record No To Delete</label> 	</td> 
+					 
 					 <td><input type="submit" value="Delete Record" name="deleteButton"/></td>
+					 <td><input id="id" type="text" name="id"/> </td> 
+					 <td><label for="id"><< Input Record No To Delete</label> 	</td> 
 					 <td><label for="id"></label></td>
 					 <td><label for="id"></label></td>
 					 <td><label for="id"></label></td>
@@ -99,27 +99,20 @@
 			</tr>
 			<tr>
 				<form action="setNumber.php" method="post">
-					 <td><input id="id" type="text" name="id"/> </td> 
-					 <td><label for="id"><<--Number to Change  &nbsp;  | &nbsp;  New No -->></label> 	</td> 
-					 <td><input id="new_id" type="text" name="new_id"/> </td> 
 					 <td><input type="submit" value="Change Record No " name="changeButton"/></td>
+					 <td><input id="id" type="text" name="id"/> </td> 
+					 <td><label for="id"><< Old Number  &nbsp;  | &nbsp;  New Number >></label> 	</td> 
+					 <td><input id="new_id" type="text" name="new_id"/> </td> 					 
 					 <td><label for="id"></label></td>
 					 <td><label for="id"></label></td>
 				</form>			
 			</tr>
 		</table>
-				   				   				  
-
-  
-
-	
 	<hr>
 </section>
-
 <section class="table">
 	<h2>TABLE MATCHES EDITOR</h2>
 	<br>
-	
 	<?php
 	
 		include_once("config.php");
@@ -127,7 +120,7 @@
 		$sqlQuery = "SELECT match_id as ID, match_date as MATCH_DATE,team1_name as HOME_TEAM,team2_name as GUEST_TEAM,team1_score as HT_SCORE,team2_score as GT_SCORE FROM matches";
 		$resultSet = mysqli_query($conn, $sqlQuery) or die("database error:". mysqli_error($conn));
 		?>
-<table id="tabela" class="table table-bordered">
+		<table id="tabela" class="table table-bordered">
 			<thead>
 				<tr>
 					<th>ID</th>
@@ -161,21 +154,21 @@
 			</tbody>
 			<tr>
 						<form class="add" action="addNewRow.php" method="post">
-							<td> <input  type="submit" value="Add new record" name="addNew"/> </td>
+							
+							<td><input  type="submit" value="Add new record" name="addNew"/></td>
 							<td> <input  type="text" name="match_date" /> </td>
 							<td> <input  type="text" name="home_team" /> </td>
 							<td> <input  type="text" name="guest_team" /> </td>
 							<td> <input  type="text" name="ht_score" /> </td>
 							<td> <input  type="text" name="gt_score" /> </td>			
-					
 						</form>
 			</tr>
 			<tr>
 				<form action="deleteRecord.php" method="post">
-					
-					 <td><input id="match_id" type="text" name="match_id"/> </td> 
-					 <td><label for="id"><<-- Input Record No To Delete</label> 	</td> 
+					 
 					 <td><input type="submit" value="Delete Record" name="deleteButton"/></td>
+					 <td><input id="match_id" type="text" name="match_id"/> </td> 
+					 <td><label for="id"><<  Input Record No To Delete</label></td> 					 
 					 <td><label for="id"></label></td>
 					 <td><label for="id"></label></td>
 					 <td><label for="id"></label></td>
@@ -183,20 +176,16 @@
 			</tr>
 			<tr>
 				<form action="setNumber.php" method="post">
-					 <td><input id="match_id" type="text" name="match_id"/> </td> 
-					 <td><label for="match_id"><<--Number to Change  &nbsp;  | &nbsp;  New No -->></label> 	</td> 
-					 <td><input id="new_match_id" type="text" name="new_match_id"/> </td> 
 					 <td><input type="submit" value="Change Record No " name="changeButton"/></td>
+					 <td><input id="match_id" type="text" name="match_id"/> </td> 
+					 <td><label for="match_id"><<  Number to Change  &nbsp;  | &nbsp;  New No  >></label> 	</td> 
+					 <td><input id="new_match_id" type="text" name="new_match_id"/> </td> 					 
 					 <td><label for="id"></label></td>
 					 <td><label for="id"></label></td>
 				</form>			
 			</tr>
 		</table>
-				   				   				  
-
-  
-
-	
+		
 	<hr>
 </section>
 </body>
