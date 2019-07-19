@@ -17,6 +17,9 @@
 
 <body>	
 	<div class="container">
+		<form action="index.php" name="return">
+			<input type="submit" value="Return" name="return"/>
+		</form>	
 		<div class="login-window">
 			<a href="rejestracja.php" class="not-active">Registration - create free account!</a>
 			<br />

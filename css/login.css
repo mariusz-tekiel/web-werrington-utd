@@ -82,3 +82,24 @@ label {
   color: rgb(28, 53, 29);
   font-size: 18px;
 }
+input[type="submit"]:hover {
+  background-color: #37b93d;
+}
+
+input[name="return"]:hover {
+  background-color: #bac520;
+}
+
+input[name="return"] {
+  width: 300px;
+  background-color: #aab33a;
+  font-size: 20px;
+  color: white;
+  padding: 15px 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  outline: none;
+}
