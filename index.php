@@ -283,12 +283,20 @@
     <br>
     <br>
     <br>
+    <br>
+    <br>
   </section>
 
 
   <!-- Footer section -->
   <footer id="contact">
     <div class="container">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
       <div class="row pt-4">
 
         <div class="col-12 col-sm-6 col-md-4">
@@ -299,9 +307,10 @@
               <span class="fa fa-map-marker iconSocial"></span>
               <p>Queen Katharine Academy, Mountsteven Ave, Peterborough PE4 6HX</p>
 
-              <span class="fa fa-envelope-o iconSocial"></span>
               <p>
-                <a target="_blank" href="mailto:werrington.united@gmail.com">werrington.united@gmail.com </a>
+                <a target="_blank" href="mailto:werrington.united@gmail.com">
+                  <span class="fa fa-envelope-o iconSocial"></span>
+                  <br>werrington.united@gmail.com </a>
               </p>
 
               <a target="_blank" href="https://www.facebook.com/werrington.united/">
