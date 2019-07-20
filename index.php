@@ -143,14 +143,26 @@
               <h1>CLUB</h1>
            
 
-              <p>The Werrington United Team was founded in 2012 by a group of friends in Peterborough. Initially, it was
+              <p>The Werrington United Volleyball Club was founded in 2012 by a group of friends in Peterborough. Initially, it was
                   just a pleasant
-                  form of spending free time. In 2014, Werrington Utd team played for the first time in the Cambridgeshire
+                  form of spending free time. In 2014, Werrington Utd VC played for the first time in Cambridgeshire
                   League game.</p>
-                  <figure>
+                 <!-- <figure>
                     <img src="img/club-sec/werrington-centre.jpg" class="img-fluid" alt="Responsive-image">
                    <figcaption>First base of Werrington United Team</figcaption>
-                  </figure>
+                  </figure> -->
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
                   <br>
                   <br>
                   <br>
@@ -284,24 +296,19 @@
             <h4>Contacts:</h4>
 
             <div class="contacts">
-              <span class="fa fa-phone-square iconSocial"></span>
-              <p>+(0044) 11111111</p>
-              <p>+(0044) 22222222</p>
-
               <span class="fa fa-map-marker iconSocial"></span>
-              <p>Peterborough, ...</p>
+              <p>Queen Katharine Academy, Mountsteven Ave, Peterborough PE4 6HX</p>
 
               <span class="fa fa-envelope-o iconSocial"></span>
               <p>
-                <a target="_blank" href="mailto:damian.glab@gmail.com">damian.glab@gmail.com</a>
+                <a target="_blank" href="mailto:werrington.united@gmail.com">werrington.united@gmail.com </a>
               </p>
 
-              <a target="_blank" href="https://www.facebook.com/werrington_united_volleyball_club_peterborough">
+              <a target="_blank" href="https://www.facebook.com/werrington.united/">
                 <span class="fa fa-facebook iconSocial"></span>
+                <br>https://www.facebook.com/werrington.united/
               </a>
-              <a target="_blank" href="https://www.instagram.com/sport_house_club/">
-                <span class="fa fa-instagram iconSocial"></span>
-              </a>
+              
             </div>
 
           </div>
@@ -309,8 +316,8 @@
 
         <div class="col-12 col-sm-6 col-md-4">
           <div class="oppen-hours">
-            <h4>Meetings hours, advertisement</h4>
-            ...
+            <h4>Meetings hours:</h4>
+            <p> We are training on every Saturday 10:00-12:00 </p> 
           </div>
         </div>
 
@@ -331,7 +338,7 @@
   <!-- Scripts -->
   <script>
     function myMap() {
-      var myCenter = new google.maps.LatLng(52.6201983,-0.2784895);
+      var myCenter = new google.maps.LatLng(52.6076167,-0.2693305);
       var mapCanvas = document.getElementById("googleMap");
       var mapOptions = {
         center: myCenter,
