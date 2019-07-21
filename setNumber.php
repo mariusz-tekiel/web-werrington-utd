@@ -2,7 +2,7 @@
 require_once 'database.php';
 	session_start();
 	if(!isset($_SESSION['zalogowany'])){
-		header('Location: indexLogin.php');
+		header('Location: peterborough-volleyball-login');
 		exit();
     }
     
@@ -20,7 +20,7 @@ require_once 'database.php';
 		$resultSet = mysqli_query($conn, $sqlQuery) or die("database error:". mysqli_error($conn));
 		
     } elseif(isset($_POST['match_id']) ){
-			include_once("config.php");
+			include_once("peterborough-volleyball-configuration");
 			
             $match_id = $_POST['match_id'];
             $new_match_id = $_POST['new_match_id'];
@@ -32,5 +32,5 @@ require_once 'database.php';
 			$resultSet = mysqli_query($conn, $sqlQuery) or die("database error:". mysqli_error($conn));
 		
 	} 
-	header('Location: tableEditor.php'); 
+	header('Location: peterborough-volleyball-database'); 
 ?>

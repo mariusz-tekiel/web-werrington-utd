@@ -76,7 +76,7 @@
 				<?php } ?>
 			</tbody>
 			<tr>
-						<form action="addNewRow.php" method="post">
+						<form action="peterborough-volleyball-add-row" method="post">
 							<td> <input  type="submit" value="Add new record" name="addNew"/> </td>
 							<td> <input  type="text" name="team_name" /> </td>
 							<td> <input  type="text" name="played" /> </td>
@@ -87,7 +87,7 @@
 						</form>
 			</tr>
 			<tr>
-				<form action="deleteRecord.php" method="post">
+				<form action="peterborough-volleyball-delete-record" method="post">
 					 
 					 <td><input type="submit" value="Delete Record" name="deleteButton"/></td>
 					 <td><input id="id" type="text" name="id"/> </td> 
@@ -98,7 +98,7 @@
 				</form>			
 			</tr>
 			<tr>
-				<form action="setNumber.php" method="post">
+				<form action="peterborough-volleyball-change-number" method="post">
 					 <td><input type="submit" value="Change Record No " name="changeButton"/></td>
 					 <td><input id="id" type="text" name="id"/> </td> 
 					 <td><label for="id"><< Old Number  &nbsp;  | &nbsp;  New Number >></label> 	</td> 
@@ -153,7 +153,7 @@
 				<?php } ?>
 			</tbody>
 			<tr>
-						<form class="add" action="addNewRow.php" method="post">
+						<form class="add" action="peterborough-volleyball-add-row" method="post">
 							
 							<td><input  type="submit" value="Add new record" name="addNew"/></td>
 							<td> <input  type="text" name="match_date" /> </td>
@@ -164,7 +164,7 @@
 						</form>
 			</tr>
 			<tr>
-				<form action="deleteRecord.php" method="post">
+				<form action="peterborough-volleyball-delete-record" method="post">
 					 
 					 <td><input type="submit" value="Delete Record" name="deleteButton"/></td>
 					 <td><input id="match_id" type="text" name="match_id"/> </td> 
@@ -175,7 +175,7 @@
 				</form>			
 			</tr>
 			<tr>
-				<form action="setNumber.php" method="post">
+				<form action="peterborough-volleyball-change-number" method="post">
 					 <td><input type="submit" value="Change Record No " name="changeButton"/></td>
 					 <td><input id="match_id" type="text" name="match_id"/> </td> 
 					 <td><label for="match_id"><<  Number to Change  &nbsp;  | &nbsp;  New No  >></label> 	</td> 

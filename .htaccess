@@ -10,7 +10,12 @@ RewriteRule peterborough-volleyball-werrington-utd index.php
 RewriteRule peterborough-volleyball-login indexLogin.php
 RewriteRule peterborough-volleyball-club-players zaloguj.php
 RewriteRule peterborough-volleyball-connection connect.php
+
 RewriteRule peterborough-volleyball-database tableEditor.php
+RewriteRule peterborough-volleyball-add-row addNewRow.php
+RewriteRule peterborough-volleyball-delete-record deleteRecord.php
+RewriteRule peterborough-volleyball-change-number setNumber.php
+RewriteRule peterborough-volleyball-configuration config.php
 
 
 

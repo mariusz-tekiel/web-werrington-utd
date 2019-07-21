@@ -2,11 +2,11 @@
 		session_start();
 		
 		if((!isset($_POST['login'])) || (!isset($_POST['haslo']))){
-			header('Location: index.php');
+			header('Location: peterborough-volleyball-werrington-utd');
 			exit();
 		}
 
-		require_once "connect.php";
+		require_once "peterborough-volleyball-connection";
 		
 		$polaczenie = @new mysqli($host,$db_user,$db_password,$db_name);
 		
@@ -41,12 +41,12 @@
 						unset($_SESSION['blad']);
 						
 						$rezultat->free_result();
-						header('Location: tableEditor.php');
+						header('Location: peterborough-volleyball-database');
 
 				} else {
 					$_SESSION['blad'] = '<span style="color:red;font-size:18px;" >Login or password is not correct!</span>';
 					$_SESSION['zalogowany']=false;
-					header('Location: indexLogin.php');
+					header('Location: peterborough-volleyball-login');
 				}
 			}
 			$polaczenie->close();

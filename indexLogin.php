@@ -2,7 +2,7 @@
 	session_start();
 	$_SESSION['zalogowany']=false;
 	if((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true)){
-		header('Location: tableEditor.php');
+		header('Location: peterborough-volleyball-database');
 		exit();
 	}
  ?>
@@ -17,7 +17,7 @@
 
 <body>	
 	<div class="container">
-		<form action="index.php" name="return">
+		<form action="peterborough-volleyball-werrington-utd" name="return">
 			<input type="submit" value="Return" name="return"/>
 		</form>	
 		<div class="login-window">
@@ -27,7 +27,7 @@
 			<br>
 			<br>
 			
-			<form action="zaloguj.php" method="post">
+			<form action="peterborough-volleyball-club-players" method="post">
 			
 				<label for="">Login:</label> <br /> <input type="text" name="login" /> <br />
 				<label for="">Password:</label><br /> <input type="password" name="haslo" /> <br /><br />

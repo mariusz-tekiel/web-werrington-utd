@@ -88,7 +88,7 @@
             <a class="nav-link" href="#contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="indexLogin.php">Log In</a>
+            <a class="nav-link" href="peterborough-volleyball-login">Log In</a>
           </li>
         </ul>
       </div>
@@ -109,9 +109,9 @@
         <img alt="Hands up" class="star" src="img/header-bg/bg_2.jpg">
         <div class="header-text">
           <h1>
-            <span class="sp">Werrington United!</span>
+            <span class="sp">Join Us</span>
           </h1>
-          <h3>Volleyball Club</h3>
+          <h3>and have fun!</h3>
     
         </div>
       </div>
