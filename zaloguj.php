@@ -6,7 +6,7 @@
 			exit();
 		}
 
-		require_once "peterborough-volleyball-connection";
+		require_once "connect.php";
 		
 		$polaczenie = @new mysqli($host,$db_user,$db_password,$db_name);
 		

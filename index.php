@@ -100,7 +100,7 @@
         <img alt="Hand-volleyball" class="star" src="img/header-bg/bg_1.jpg">
         <div class="header-text">
           <h1>
-            <span class="sp">Werrington United!</span>
+            <span class="sp">Werrington United</span>
           </h1>
           <h3>Volleyball Club</h3>
         </div>
@@ -109,9 +109,9 @@
         <img alt="Hands up" class="star" src="img/header-bg/bg_2.jpg">
         <div class="header-text">
           <h1>
-            <span class="sp">Join Us</span>
+            <span class="sp">Werrington United</span>
           </h1>
-          <h3>and have fun!</h3>
+          <h3>The New Kids on the Block</h3>
     
         </div>
       </div>
@@ -119,18 +119,18 @@
         <img alt="Volleyball Team" class="star" src="img/header-bg/bg_3.jpg">
         <div class="header-text">
           <h1>
-            <span class="sp">Werrington United!</span>
+            <span class="sp">Werrington United</span>
           </h1>
-          <h3>Volleyball Club</h3>
+          <h3>You set it in the air and I’ll hit it anywhere</h3>
         </div>
       </div>
       <div class="mySlides">
         <img alt="legs" class="star" src="img/header-bg/bg_4.jpg">
         <div class="header-text">
           <h1>
-            <span class="sp">Werrington United!</span>
+            <span class="sp">Join Us</span>
           </h1>
-          <h3>Volleyball Club</h3>
+          <h3>and See you in Court!</h3>
     
         </div>
       </div>
