@@ -1,0 +1,18 @@
+### PROTECT FILES ###
+<FilesMatch "\.(htaccess|htpasswd|ini|fla|psd|log|sh)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+RewriteEngine on
+
+RewriteRule peterborough-volleyball-werrington-utd index.php
+RewriteRule peterborough-volleyball-login indexLogin.php
+RewriteRule peterborough-volleyball-club-players zaloguj.php
+RewriteRule peterborough-volleyball-connection connect.php
+RewriteRule peterborough-volleyball-database tableEditor.php
+
+
+
+
+
