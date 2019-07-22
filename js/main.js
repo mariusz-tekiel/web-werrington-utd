@@ -39,7 +39,7 @@ $(function() {
       document.body.scrollTop > 100 ||
       document.documentElement.scrollTop > 100
     ) {
-      document.getElementById("navbar").style.background = "#ffffff";
+      document.getElementById("navbar").style.background = " rgb(25, 1, 49)";
       document.getElementById("navbar").style.padding = "5px 5%";
     } else {
       document.getElementById("navbar").style.background = "";
