@@ -16,7 +16,7 @@ require_once 'database.php';
 		$points=$_POST['points'];
 		
 
-		$conn = @new mysqli('localhost','root','','werrington');
+		$conn = new mysqli('10.16.16.17','werr-8ec-u-240701','mario71','werr-8ec-u-240701');
        
 		$sqlQuery = "INSERT INTO teams (team_name, played, lost,won,points)
 					VALUES ('$team_name', '$played', '$lost','$won','$points')";
@@ -32,7 +32,7 @@ require_once 'database.php';
 			$ht_score = $_POST['ht_score'];
 			$gt_score = $_POST['gt_score'];
 
-			$conn = @new mysqli('localhost','root','','werrington');
+			$conn = new mysqli('10.16.16.17','werr-8ec-u-240701','mario71','werr-8ec-u-240701');
        
 			$sqlQuery = "INSERT INTO matches (match_date, team1_name, team2_name,team1_score,team2_score)
 					VALUES ('$match_date', '$home_team', '$guest_team','$ht_score','$gt_score')";

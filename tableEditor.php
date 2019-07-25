@@ -2,7 +2,7 @@
     require_once 'database.php';
 	session_start();
 	if(!isset($_SESSION['zalogowany'])){
-		header('Location: index-new.php');
+		header('Location: indexLogin.php');
 		exit();
 	}
 ?>
@@ -39,7 +39,7 @@
 <?php
 	
 		include_once("config.php");
-		$conn = @new mysqli('localhost','root','','werrington');
+		$conn = new mysqli('10.16.16.17','werr-8ec-u-240701','mario71','werr-8ec-u-240701');
 		$sqlQuery = "SELECT team_id as NO, team_name as TEAM, played as PLAYED, lost as LOST, won as WON, points as POINTS FROM `teams`";
 		$resultSet = mysqli_query($conn, $sqlQuery) or die("database error:". mysqli_error($conn));
 		?>
@@ -116,7 +116,7 @@
 	<?php
 	
 		include_once("config.php");
-		$conn = @new mysqli('localhost','root','','werrington');
+		$conn = new mysqli('10.16.16.17','werr-8ec-u-240701','mario71','werr-8ec-u-240701');
 		$sqlQuery = "SELECT match_id as ID, match_date as MATCH_DATE,team1_name as HOME_TEAM,team2_name as GUEST_TEAM,team1_score as HT_SCORE,team2_score as GT_SCORE FROM matches";
 		$resultSet = mysqli_query($conn, $sqlQuery) or die("database error:". mysqli_error($conn));
 		?>

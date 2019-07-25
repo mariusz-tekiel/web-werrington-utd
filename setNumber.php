@@ -14,7 +14,7 @@ require_once 'database.php';
         echo $id;
         echo $new_id;
 
-		$conn = @new mysqli('localhost','root','','werrington');
+		$conn = new mysqli('10.16.16.17','werr-8ec-u-240701','mario71','werr-8ec-u-240701');
        
 		$sqlQuery = "UPDATE teams SET team_id='$new_id' WHERE team_id=$id";
 		$resultSet = mysqli_query($conn, $sqlQuery) or die("database error:". mysqli_error($conn));
@@ -26,7 +26,7 @@ require_once 'database.php';
             $new_match_id = $_POST['new_match_id'];
             
 			echo $new_match_id;
-			$conn = @new mysqli('localhost','root','','werrington');
+			$conn = new mysqli('10.16.16.17','werr-8ec-u-240701','mario71','werr-8ec-u-240701');
        
 			$sqlQuery = "UPDATE matches SET match_id='$new_match_id' WHERE match_id = '$match_id' ";
 			$resultSet = mysqli_query($conn, $sqlQuery) or die("database error:". mysqli_error($conn));
