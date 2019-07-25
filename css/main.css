@@ -458,13 +458,12 @@ figcaption {
   font-size: 14px;
   background-position: center;
   background-size: cover;
-}
-#news {
-  background-image: url("../img/bg/morze-siatka.jpg");
-}
-#schedule {
   background-image: url("../img/bg/morze-siatka2.jpg");
 }
+.league {
+  background-image: url("../img/bg/morze-siatka.jpg");
+}
+
 #about {
   background-image: url("../img/bg/siatka-hala.jpg");
   color: #dac341;
