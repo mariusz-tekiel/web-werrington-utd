@@ -471,5 +471,6 @@ figcaption {
   font-size: 24px;
   font-weight: bold;
   text-align: left;
-  text-shadow: 3px 2px rgb(3, 3, 3);
+  text-shadow: 3px 2px rgb(2, 2, 2);
+  text-shadow: 3px 2px rgb(8, 1, 49);
 }
