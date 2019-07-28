@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Werrington United</title>
+  <title>Werrington United Volleyball Club</title>
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta http-equiv="Content-language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -178,114 +178,122 @@
   <!-- League Table Section-->
   <section class="league" id="news">
     <div class="container">
-        <div class="row">
+       <div class="row">
           <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">
            <br><br><br>
             <div></div>
         
           </div>
         </div>
-      <h1 class="text-center mb-3">LEAGUE TABLE       
-      </h1>
- <div>
-   <?php
- try {
-    $con= new PDO('mysql:host=10.16.16.17;dbname=werr-8ec-u-240701', 'werr-8ec-u-240701', 'mario71');
-    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $query = "SELECT team_id as NO, team_name as TEAM, played as PLAYED, lost as LOST, won as WON, points as POINTS FROM `teams`";
-  //first pass just gets the column names
-    print '<table class="table" border="2px"> ';
-    $result = $con->query($query);
-  //return only the first row (we only need field names)
-    $row = $result->fetch(PDO::FETCH_ASSOC);
-      print " <tr>";
-    foreach ($row as $field => $value){
-      print " <th>$field</th>";
-    } // end foreach
-      print " </tr>";
-    //second query gets the data
-      $data = $con->query($query);
-      $data->setFetchMode(PDO::FETCH_ASSOC);
-    foreach($data as $row){
-        print " <tr>";
-      foreach ($row as $name=>$value){
-          print " <td>$value</td>";
-       } // end field loop
-      print " </tr>";
-    } // end record loop
-    print "</table>";
- }
- catch(PDOException $e) {
-   echo 'ERROR: ' . $e->getMessage();
- } // end try
- 
-?>
-  
- </div>
-      <div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+          <h1 class="text-center mb-3">LEAGUE TABLE       
+          </h1>
+             <div>
+                <?php
+              try {
+                  $con= new PDO('mysql:host=10.16.16.17;dbname=werr-8ec-u-240701', 'werr-8ec-u-240701', 'mario71');
+                  $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                  $query = "SELECT team_id as NO, team_name as TEAM, played as PLAYED, lost as LOST, won as WON, points as POINTS FROM `teams`";
+                //first pass just gets the column names
+                  print '<table class="table" border="2px"> ';
+                  $result = $con->query($query);
+                //return only the first row (we only need field names)
+                  $row = $result->fetch(PDO::FETCH_ASSOC);
+                    print " <tr>";
+                  foreach ($row as $field => $value){
+                    print " <th>$field</th>";
+                  } // end foreach
+                    print " </tr>";
+                  //second query gets the data
+                    $data = $con->query($query);
+                    $data->setFetchMode(PDO::FETCH_ASSOC);
+                  foreach($data as $row){
+                      print " <tr>";
+                    foreach ($row as $name=>$value){
+                        print " <td>$value</td>";
+                    } // end field loop
+                    print " </tr>";
+                  } // end record loop
+                  print "</table>";
+              }
+              catch(PDOException $e) {
+                echo 'ERROR: ' . $e->getMessage();
+              } // end try
+              
+              ?>
+      
+            </div>
+            <div>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+            </div>
+
 
       </div>
+
+
+
+
     </div>
+  
   </section>
 
  
-  <!-- Matches section -->
+  <!-- Matches schedule section -->
 <section class="schedule" id="schedule">
-    <h1>MATCHES</h1>
- <?php
- try {
-    $con= new PDO('mysql:host=10.16.16.17;dbname=werr-8ec-u-240701', 'werr-8ec-u-240701', 'mario71');
-    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $query = "SELECT match_date as MATCH_DATE,team1_name as HOME_TEAM,team2_name as GUEST_TEAM,team1_score as HT_SCORE,team2_score as GT_SCORE FROM matches";
-  //first pass just gets the column names
-    print '<table class="table" border="2px"> ';
-    $result = $con->query($query);
-  //return only the first row (we only need field names)
-    $row = $result->fetch(PDO::FETCH_ASSOC);
-      print " <tr>";
-    foreach ($row as $field => $value){
-      print " <th>$field</th>";
-    } // end foreach
-      print " </tr>";
-    //second query gets the data
-      $data = $con->query($query);
-      $data->setFetchMode(PDO::FETCH_ASSOC);
-    foreach($data as $row){
-        print " <tr>";
-      foreach ($row as $name=>$value){
-          print " <td>$value</td>";
-       } // end field loop
-      print " </tr>";
-    } // end record loop
-    print "</table>";
- }
- catch(PDOException $e) {
-   echo 'ERROR: ' . $e->getMessage();
- } // end try
- 
-?>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-  </section>
+  <div class="container">
+    <div class="row" id="row-schedule">
+      <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">
+              <h1>MATCHES</h1>
+          <?php
+          try {
+              $con= new PDO('mysql:host=10.16.16.17;dbname=werr-8ec-u-240701', 'werr-8ec-u-240701', 'mario71');
+              $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+              $query = "SELECT match_date as MATCH_DATE,team1_name as HOME_TEAM,team2_name as GUEST_TEAM,team1_score as HT_SCORE,team2_score as GT_SCORE FROM matches";
+            //first pass just gets the column names
+              print '<table class="table" border="2px"> ';
+              $result = $con->query($query);
+            //return only the first row (we only need field names)
+              $row = $result->fetch(PDO::FETCH_ASSOC);
+                print " <tr>";
+              foreach ($row as $field => $value){
+                print " <th>$field</th>";
+              } // end foreach
+                print " </tr>";
+              //second query gets the data
+                $data = $con->query($query);
+                $data->setFetchMode(PDO::FETCH_ASSOC);
+              foreach($data as $row){
+                  print " <tr>";
+                foreach ($row as $name=>$value){
+                    print " <td>$value</td>";
+                } // end field loop
+                print " </tr>";
+              } // end record loop
+              print "</table>";
+          }
+          catch(PDOException $e) {
+            echo 'ERROR: ' . $e->getMessage();
+          } // end try
+          
+          ?>
+             
+        </div>          
+    </div>          
+   </div>          
+</section>
 
 
   <!-- Footer section -->
