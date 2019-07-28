@@ -4,12 +4,11 @@
 <head>
   <meta charset="utf-8">
   <title>Werrington United Volleyball Club</title>
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta http-equiv="Content-language" content="en">
+  <meta http-equiv="x-ua-compatible" content="ie=edge"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="google" content="notranslate">
   <meta name="description"
-    content="Voleyball sport club located in Peterborough. It is gethering half-professional players and fans of this disciplines. ">
+    content="Volleyball sport club located in Peterborough. It is gethering half-professional players and fans of this disciplines. ">
   <meta name="keywords" content="volleyball, ball, Peterborugh, Werrington, Utd, sport, volleyball peach, club, league">
   <meta name="theme-color" content="#fff">
 
@@ -108,9 +107,9 @@
       <div class="mySlides">
         <img alt="Hands up" class="star" src="img/header-bg/bg_2.jpg">
         <div class="header-text">
-          <h1>
-            <span class="sp">Werrington United Volleyball Club</span>
-          </h1>
+          <h2>
+            <span class="sp">Volleyball Club from Peterborough</span>
+          </h2>
           <h2>The New Kids on the Block</h2>
     
         </div>
@@ -118,18 +117,18 @@
       <div class="mySlides">
         <img alt="Volleyball Team" class="star" src="img/header-bg/bg_3.jpg">
         <div class="header-text">
-          <h1>
-            <span class="sp">Werrington United Volleyball Club</span>
-          </h1>
+          <h2>
+            <span class="sp">New match every week</span>
+          </h2>
           <h2>You set it in the air and I’ll hit it anywhere</h2>
         </div>
       </div>
       <div class="mySlides">
         <img alt="legs" class="star" src="img/header-bg/bg_4.jpg">
         <div class="header-text">
-          <h1>
+          <h2>
             <span class="sp">Join Us</span>
-          </h1>
+          </h2>
           <h2>and See you in Court!</h2>
     
         </div>
@@ -140,13 +139,17 @@
       <div class="container">
         <div class="row"> 
           <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">
-              <h1>CLUB</h1>
+              <h2>CLUB</h2>
            
 
               <p>The Werrington United Volleyball Club was founded in 2012 by a group of friends in Peterborough. Initially, it was
                   just a pleasant
                   form of spending free time. In 2014, Werrington Utd VC played for the first time in Cambridgeshire
                   League game.</p>
+                  <p>For several years, the team played in league games with smaller or larger successes.</p>
+                  <p>From time to time, the team struggled with staff shortages. The worst time is the holiday season, when some people leave for holidays. In general, the composition of the team has changed many times.</p>
+                  <p>The team has a fanpage on facebook where you can find photos of the team and additional information about it.</p>
+                  <p>In the summertime club organizes outdoor happenings. We warmly invite you all!</p>  
                  <!-- <figure>
                     <img src="img/club-sec/werrington-centre.jpg" class="img-fluid" alt="Responsive-image">
                    <figcaption>First base of Werrington United Team</figcaption>
@@ -159,15 +162,7 @@
                   <br>
                   <br>
                   <br>
-                  <br>
-                  <br>
-                  <br>
-                  <br>
-                  <br>
-                  <br>
-                  <br>
-                  <br>
-                  <br>
+                 
 
            </div>
         </div>
@@ -185,8 +180,8 @@
         
           </div>
         </div>
-          <h1 class="text-center mb-3">LEAGUE TABLE       
-          </h1>
+          <h2 class="text-center mb-3">LEAGUE TABLE       
+          </h2>
              <div>
                 <?php
               try {
@@ -256,7 +251,7 @@
   <div class="container">
     <div class="row" id="row-schedule">
       <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">
-              <h1>MATCHES</h1>
+              <h2>MATCHES</h2>
           <?php
           try {
               $con= new PDO('mysql:host=10.16.16.17;dbname=werr-8ec-u-240701', 'werr-8ec-u-240701', 'mario71');
@@ -309,7 +304,7 @@
 
         <div class="col-12 col-sm-6 col-md-4">
           <div class="cont">
-            <h4>Contacts:</h4>
+            <h3>Contacts:</h3>
 
             <div class="contacts">
               <span class="fa fa-map-marker iconSocial"></span>
@@ -416,8 +411,7 @@
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
     crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/main.js"></script>
-  <script type="text/javascript" src="js/galleryJS.js"></script>
+  <script src="js/main.js"></script>  
 </body>
 
 </html>

@@ -12,6 +12,9 @@ h1 {
   font-size: 26px;
   font-weight: bold;
 }
+h2 {
+  text-align: center;
+}
 .sp {
   color: #dac341;
   text-shadow: 1px 1px 1px #000000;

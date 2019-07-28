@@ -91,7 +91,7 @@
 					 
 					 <td><input type="submit" value="Delete Record" name="deleteButton"/></td>
 					 <td><input id="id" type="text" name="id"/> </td> 
-					 <td><label for="id"><< Input Record No To Delete</label> 	</td> 
+					 <td><label for="id">&larr; Input Record No To Delete</label> 	</td> 
 					 <td><label for="id"></label></td>
 					 <td><label for="id"></label></td>
 					 <td><label for="id"></label></td>
@@ -101,7 +101,7 @@
 				<form action="peterborough-volleyball-change-number" method="post">
 					 <td><input type="submit" value="Change Record No " name="changeButton"/></td>
 					 <td><input id="id" type="text" name="id"/> </td> 
-					 <td><label for="id"><< Old Number  &nbsp;  | &nbsp;  New Number >></label> 	</td> 
+					 <td><label for="id">&larr; Old Number  &nbsp;  | &nbsp;  New Number &rarr;</label> 	</td> 
 					 <td><input id="new_id" type="text" name="new_id"/> </td> 					 
 					 <td><label for="id"></label></td>
 					 <td><label for="id"></label></td>
@@ -168,7 +168,7 @@
 					 
 					 <td><input type="submit" value="Delete Record" name="deleteButton"/></td>
 					 <td><input id="match_id" type="text" name="match_id"/> </td> 
-					 <td><label for="id"><<  Input Record No To Delete</label></td> 					 
+					 <td><label for="id">&larr; Input Record No To Delete</label></td> 					 
 					 <td><label for="id"></label></td>
 					 <td><label for="id"></label></td>
 					 <td><label for="id"></label></td>
@@ -178,7 +178,7 @@
 				<form action="peterborough-volleyball-change-number" method="post">
 					 <td><input type="submit" value="Change Record No " name="changeButton"/></td>
 					 <td><input id="match_id" type="text" name="match_id"/> </td> 
-					 <td><label for="match_id"><<  Number to Change  &nbsp;  | &nbsp;  New No  >></label> 	</td> 
+					 <td><label for="match_id">&larr; Number to Change &nbsp; | &nbsp;  New No &rarr;</label> 	</td> 
 					 <td><input id="new_match_id" type="text" name="new_match_id"/> </td> 					 
 					 <td><label for="id"></label></td>
 					 <td><label for="id"></label></td>
