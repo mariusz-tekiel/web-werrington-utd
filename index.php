@@ -305,7 +305,7 @@
 
         <div class="col-12 col-sm-6 col-md-4">
           <div class="cont">
-            <h4>Contacts:</h4>
+            <h3>Contacts:</h3>
 
             <div class="contacts">
               <span class="fa fa-map-marker iconSocial"></span>
