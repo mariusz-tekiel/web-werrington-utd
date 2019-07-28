@@ -4,8 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Werrington United Volleyball Club</title>
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta http-equiv="Content-language" content="en">
+  <meta http-equiv="x-ua-compatible" content="ie=edge"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="google" content="notranslate">
   <meta name="description"
@@ -109,7 +108,7 @@
         <img alt="Hands up" class="star" src="img/header-bg/bg_2.jpg">
         <div class="header-text">
           <h2>
-            <span class="sp">Werrington United Volleyball Club</span>
+            <span class="sp">Volleyball Club from Peterborough</span>
           </h2>
           <h2>The New Kids on the Block</h2>
     
@@ -119,7 +118,7 @@
         <img alt="Volleyball Team" class="star" src="img/header-bg/bg_3.jpg">
         <div class="header-text">
           <h2>
-            <span class="sp">Werrington United Volleyball Club</span>
+            <span class="sp">New match every week</span>
           </h2>
           <h2>You set it in the air and I’ll hit it anywhere</h2>
         </div>
@@ -412,7 +411,7 @@
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
     crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/main.js"></script>  
+  <script src="js/main.js"></script>  
 </body>
 
 </html>
