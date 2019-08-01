@@ -5,10 +5,11 @@ require_once 'database.php';
 		header('Location: indexLogin.php');
 		exit();
     }
-       
-  
-    if(isset($_POST['points'])){
+        
+    echo $_SESSION['id'];
+    /*if(isset($_SESSION['id'])){
         include_once("config.php");
+<<<<<<< HEAD
         $team_name=$_POST['team_name'];
         $played=$_POST['played'];
         $lost=$_POST['lost'];
@@ -17,10 +18,15 @@ require_once 'database.php';
 		
 
 		$conn = new mysqli('10.16.16.17','werr-8ec-u-240701','mario71','werr-8ec-u-240701');
+=======
+        $id=$_SESSION['id'];
+		$conn = @new mysqli('localhost','root','','werrington');
+>>>>>>> parent of 762b42f... Table 1 edition done. Next step table2 edit
        
 		$sqlQuery = "INSERT INTO teams (team_name, played, lost,won,points)
-					VALUES ('$team_name', '$played', '$lost','$won','$points')";
+VALUES ($'TEAM', $'played', $'lost',$'won',$'points')";
 		$resultSet = mysqli_query($conn, $sqlQuery) or die("database error:". mysqli_error($conn));
+<<<<<<< HEAD
 		
 		 
     } elseif(isset($_POST['match_date']) ){
@@ -41,4 +47,7 @@ require_once 'database.php';
 	} 
 	header('Location: tableEditor.php'); 
 	
+=======
+    }*/
+>>>>>>> parent of 762b42f... Table 1 edition done. Next step table2 edit
 ?>

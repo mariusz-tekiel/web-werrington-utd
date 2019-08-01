@@ -165,7 +165,7 @@
   <section class="league" id="news">
     <div class="container-fluid">
        <div class="row">
-          <div class="col-sm-10 col-md-10 col-xl-9 mx-auto d-block">
+          <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">
              <h2 class="text-center mb-3">LEAGUE TABLE  </h2>
              
                 <?php
