@@ -108,7 +108,7 @@
         <img alt="Hands up" class="star" src="img/header-bg/bg_2.jpg">
         <div class="header-text">
           <h2>
-            <span class="sp">Volleyball Club from Peterborough</span>
+            <span class="sp">Volleyball Club Peterborough</span>
           </h2>
           <h2>The New Kids on the Block</h2>
     
@@ -120,7 +120,7 @@
           <h2>
             <span class="sp">New match every week</span>
           </h2>
-          <h2>You set it in the air and I’ll hit it anywhere</h2>
+          <h2>Check your power!</h2>
         </div>
       </div>
       <div class="mySlides">
@@ -141,7 +141,6 @@
           <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">
               <h2>CLUB</h2>
            
-
               <p>The Werrington United Volleyball Club was founded in 2012 by a group of friends in Peterborough. Initially, it was
                   just a pleasant
                   form of spending free time. In 2014, Werrington Utd VC played for the first time in Cambridgeshire
@@ -167,14 +166,8 @@
     <div class="container-fluid">
        <div class="row">
           <div class="col-sm-10 col-md-10 col-xl-9 mx-auto d-block">
-           <br><br><br>
-            <div></div>
-        
-          </div>
-        </div>
-          <h2 class="text-center mb-3">LEAGUE TABLE       
-          </h2>
-             <div class="rwd-table">
+             <h2 class="text-center mb-3">LEAGUE TABLE  </h2>
+             
                 <?php
               try {
                   $con= new PDO('mysql:host=10.16.16.17;dbname=werr-8ec-u-240701', 'werr-8ec-u-240701', 'mario71');
@@ -207,43 +200,18 @@
               } // end try
               
               ?>
-      
-            </div>
-            <div>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-            </div>
-
-
-      </div>
-
-
-
-
+          
+          </div>
+        </div>
     </div>
   
   </section>
-                  
- 
   <!-- Matches schedule section -->
 <section class="schedule" id="schedule">
   <div class="container-fluid">
     <div class="row" id="row-schedule">
       <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">
-         <div class="rwd-table">
+         
               <h2>MATCHES</h2>
             <?php
             try {
@@ -276,22 +244,15 @@
               echo 'ERROR: ' . $e->getMessage();
             } // end try
             
-            ?>
-          </div>   
+            ?>         
         </div>          
-    </div>          
+      </div>          
    </div>          
-</section>
-          
-  <!-- Footer section -->
+</section>          
+  <!-- Footer row -->
   <footer id="contact">
     <div class="container">
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+      
       <div class="row pt-4">
 
         <div class="col-12 col-sm-6 col-md-4">
@@ -326,12 +287,21 @@
         </div>
 
         <div class="col-12 col-sm-12 col-md-4">
-          <div class="maps" id="googleMap" style="width:100%;height:300px;"></div>
+          <div class="maps" id="googleMap" style="width:100%;height:300px;"></div>          
         </div>
 
       </div>
     </div>
+    <div><br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  </div>
   </footer>
+  
 
   <!-- Copyright section -->
   <div class="copyright">
