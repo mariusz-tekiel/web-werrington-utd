@@ -13,3 +13,5 @@ try{
     echo $error; //tylko na czas developerski potem usunac
     exit('Database errror');
 }
+
+?>

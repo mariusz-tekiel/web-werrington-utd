@@ -1,5 +1,6 @@
 <?php
-    require_once 'database.php';
+	require_once 'database.php';
+
 	session_start();
 	if(!isset($_SESSION['zalogowany'])){
 		header('Location: indexLogin.php');
@@ -20,6 +21,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
 	<title>Table editor</title>
 
+<<<<<<< Updated upstream
 <script>
 	$(document).ready(function() {
   //funkcja odczytująca kliknięcie w element o id: dodajWiersz
@@ -101,21 +103,30 @@
 </script>
 
 
+=======
+>>>>>>> Stashed changes
 </head>
 
 <body>
  <header>
 	<?php
+<<<<<<< Updated upstream
 		echo '<a href="logout.php"><input type="submit" value="LOGOUT" name="logout" /></a>';
 		//echo '<a href="logout.php"><< LOGOUT</a>';
 		echo "<h4>Welcome ".$_SESSION['user'].'! You are logged in.</h4>';
 		
+=======
+		echo '<a href="logout.php">Logout</a>';
+		echo "<p>Witaj ".$_SESSION['user'].'!</p>';
+		echo 'Jesteś zalogowany. Cool!<br><br>';
+>>>>>>> Stashed changes
 	?>
 
 </header>
 <section class = "table">
 	<h2>TABLE TEAMS EDITOR</h2>
 	<br>
+<<<<<<< Updated upstream
 	<p><a href="#" id="dodajWiersz" class="add button">Add new row</a></p>
 <?php
 	
@@ -282,6 +293,10 @@
 	
 >>>>>>> parent of 762b42f... Table 1 edition done. Next step table2 edit
 	<hr>
+=======
+	<br>
+	<br>
+>>>>>>> Stashed changes
 </section>
 
 <section class="table">
