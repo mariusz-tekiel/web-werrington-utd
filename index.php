@@ -61,7 +61,7 @@
   <nav class="navBar" id="navbar">
     <div class="navbar navbar-expand-md">
       <a href="">
-        <img alt="sporthouse" class="logo" src="img/logo.png">
+        <img alt="werrington-united" class="logo" src="img/logo.png">
       </a>
 
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
