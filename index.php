@@ -93,7 +93,7 @@
       </div>
     </div>
   </nav>
-  <!-- Header section -->
+  <!-- Header section  -->
     <header id="header">
       <div class="mySlides">
         <img alt="Hand-volleyball" class="star" src="img/header-bg/bg_1.jpg">
