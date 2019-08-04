@@ -17,30 +17,33 @@
 
 <body>	
 	<div class="container">
-		<form action="peterborough-volleyball-werrington-utd" name="return">
-			<input type="submit" value="Return" name="return"/>
-		</form>	
-		<div class="login-window">
-			<a href="rejestracja.php" class="not-active">Registration - create free account!</a>
-			<br />
-			<h3>Registration only for members of club! </h3>
-			<br>
-			<br>
-			
-			<form action="peterborough-volleyball-club-players" method="post">
-			
-				<label for="">Login:</label> <br /> <input type="text" name="login" /> <br />
-				<label for="">Password:</label><br /> <input type="password" name="haslo" /> <br /><br />
-				<input type="submit" value="Login" name="log_in"/>
-			
-			</form>
-			<br>
-			<?php
-				if(isset($_SESSION['blad'])) echo $_SESSION['blad'];
-			
-			?>
-		</div>	
+		<div class="row">
+          <div class="col-xm-12 col-md-10 col-xl-9 mx-auto d-block"> 
+				<form action="peterborough-volleyball-werrington-utd" name="return">
+					<input type="submit" value="Return" name="return"/>
+				</form>	
+				<div class="login-window">
+					<a href="rejestracja.php" class="not-active">Registration - create free account!</a>
+					<br />
+					<h3>Registration only for members of club! </h3>
+					<br>
+					<br>
+					
+					<form action="peterborough-volleyball-club-players" method="post">
+					
+						<label for="">Login:</label> <br /> <input type="text" name="login" /> <br />
+						<label for="">Password:</label><br /> <input type="password" name="haslo" /> <br /><br />
+						<input type="submit" value="Login" name="log_in"/>
+					
+					</form>
+					<br>
+					<?php
+						if(isset($_SESSION['blad'])) echo $_SESSION['blad'];
+					
+					?>
+            </div>	
+         </div>  
+		</div>
 	</div>
-
 </body>
 </html>
