@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="css/main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <!-- Global site tag (gtag.js) - Google Analytics  -->
+  <!-- Global site tag (gtag.js) - Google Analytic s     -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112771295-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
