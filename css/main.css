@@ -17,16 +17,18 @@ h1 {
 }
 h2 {
   text-align: center;
+  font-size: 26px;
+  font-weight: bold;
 }
 .sp {
   color: #dac341;
   text-shadow: 1px 1px 1px #000000;
-  font-size: 80px;
+  font-size: 60px;
 }
 
 @media only screen and (max-width: 835px) {
   .sp {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 figcaption {
