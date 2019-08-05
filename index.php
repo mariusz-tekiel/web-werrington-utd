@@ -139,6 +139,7 @@
       <div class="container">
         <div class="row"> 
           <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">
+            <br>
               <h2>CLUB</h2>
            
               <p>The Werrington United Volleyball Club was founded in 2012 by a group of friends in Peterborough. Initially, it was
