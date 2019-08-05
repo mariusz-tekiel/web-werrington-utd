@@ -4,9 +4,6 @@ body {
   font-weight: 300;
   letter-spacing: 0;
   line-height: 25px;
-
-  background-color: #211f1f;
-  color: #313131;
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
@@ -218,6 +215,16 @@ col-sm-12 col-md-10 col-xl-9 mx-auto d-block {
 }*/
 
 /******Matches Schedule Section*******/
+@media screen and (max-width: 767px) {
+  .table-responsive > .table > thead > tr > th,
+  .table-responsive > .table > tbody > tr > th,
+  .table-responsive > .table > tfoot > tr > th,
+  .table-responsive > .table > thead > tr > td,
+  .table-responsive > .table > tbody > tr > td,
+  .table-responsive > .table > tfoot > tr > td {
+    word-break: break-word;
+  }
+}
 .schedule {
   text-align: center;
   background-color: rgb(248, 250, 235);
