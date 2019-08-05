@@ -165,12 +165,11 @@
   <!-- League Table Section-->
   
   <section class="league" id="news">
-    <div class="container">
+    <h2 class="text-center mb-3">LEAGUE TABLE  </h2>
+    <div class="container table-responsive">
        <div class="row">
           <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">
-             <h2 class="text-center mb-3">LEAGUE TABLE  </h2>
-             
-                <?php
+              <?php
               try {
                   $con= new PDO('mysql:host=10.16.16.17;dbname=werr-8ec-u-240701', 'werr-8ec-u-240701', 'mario71');
                   $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -210,16 +209,16 @@
   </section>
   <!-- Matches schedule section -->
 <section class="schedule" id="schedule">
-  <div class="container">
+   <h2>MATCHES</h2>           
+  <div class="container table-responsive">
     <div class="row" id="row-schedule">
       <div class="col-sm-12 col-md-12 col-xl-9 mx-auto d-block">
-         
-              <h2>MATCHES</h2>
+            
             <?php
             try {
                 $con= new PDO('mysql:host=10.16.16.17;dbname=werr-8ec-u-240701', 'werr-8ec-u-240701', 'mario71');
                 $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $query = "SELECT match_date as DATE,team1_name as H_T,team2_name as G_T,team1_score as HT_S,team2_score as GT_S FROM matches";
+                $query = "SELECT match_date as MATCH_DATE,team1_name as HOME_TEAM,team2_name as GUEST_TEAM,team1_score as HT_SCORE,team2_score as GT_SCORE FROM matches";
               //first pass just gets the column names
                 print '<table class="table" border="2px"> ';
                 $result = $con->query($query);
