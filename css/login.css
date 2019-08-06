@@ -1,7 +1,7 @@
 body {
-  background-color: rgb(199, 216, 194);
-  background-image: url("../img/bg/morze-siatka3.jpg");
-  color: rgb(96, 94, 224);
+  background-color: rgb(27, 19, 65);
+  /*background-image: url("../img/bg/morze-siatka3.jpg");*/
+  color: rgb(240, 240, 243);
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -82,7 +82,7 @@ a {
   font-size: 18px;
 }
 label {
-  color: rgb(28, 53, 29);
+  color: rgb(242, 250, 242);
   font-size: 18px;
 }
 input[type="submit"]:hover {
