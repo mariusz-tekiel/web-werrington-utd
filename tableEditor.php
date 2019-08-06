@@ -49,7 +49,7 @@
                   
                      include_once("config.php");
                      $conn = new mysqli('10.16.16.17','werr-8ec-u-240701','mario71','werr-8ec-u-240701');
-                     $sqlQuery = "SELECT team_id as NO, team_name as TEAM, played as PLAYED, lost as LOST, won as WON, points as POINTS FROM `teams`";
+                     $sqlQuery = "SELECT team_id as NO, team_name as TEAM, played as PLAYED, won as WON, lost as LOST, points as POINTS FROM `teams`";
                      $resultSet = mysqli_query($conn, $sqlQuery) or die("database error:". mysqli_error($conn));
                      ?>
                <table id="tabela" class="table table-responsive table-bordered">
@@ -57,9 +57,9 @@
                            <tr>
                               <th>No</th>
                               <th>Team</th>
-                              <th>Played</th>
-                              <th>Lost</th>	
-                              <th>Won</th>												
+                              <th>Played</th>                              	
+                              <th>Won</th>	
+                              <th>Lost</th>											
                               <th>Points</th>						
                            </tr>
                            
@@ -75,9 +75,9 @@
                                     ?>">
                               <td><?php echo $developer ['NO']; ?></td>
                               <td><?php echo $developer ['TEAM']; ?></td>
-                              <td><?php echo $developer ['PLAYED']; ?></td>
-                              <td><?php echo $developer ['LOST']; ?></td>
+                              <td><?php echo $developer ['PLAYED']; ?></td>                              
                               <td><?php echo $developer ['WON']; ?></td>
+                              <td><?php echo $developer ['LOST']; ?></td>
                               <td><?php echo $developer ['POINTS']; ?></td>  
                                                                         
                               </tr>
@@ -88,9 +88,9 @@
                                  <form action="peterborough-volleyball-add-row" method="post">
                                     <td> <input  type="submit" value="Add new record" name="addNew"/> </td>
                                     <td> <input  type="text" name="team_name" /> </td>
-                                    <td> <input  type="text" name="played" /> </td>
-                                    <td> <input  type="text" name="lost" /> </td>
+                                    <td> <input  type="text" name="played" /> </td>                                    
                                     <td> <input  type="text" name="won" /> </td>
+                                    <td> <input  type="text" name="lost" /> </td>
                                     <td> <input  type="text" name="points" /> </td>			
                               
                                  </form>
