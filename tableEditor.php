@@ -25,21 +25,23 @@
 <body>
 <main> 
 <div class="container">
-   <div class="row">   
-      <div class="col-sm-12">
-         <header>
-            <?php
-               echo '<a href="logout.php"><input type="submit" value="LOGOUT" name="logout" /></a>';
-               //echo '<a href="logout.php"><< LOGOUT</a>';
-               echo "<h4>Welcome ".$_SESSION['user'].'! You are logged in.</h4>';
-            ?>
-         </header>
-      </div> 
-   </div>      
-   <section class = "table">
+      <div  class="row">    
+         <div class="col-sm-12" id="welcome">
+            <header>
+               <?php
+                  echo '<a href="logout.php"><input type="submit" value="LOGOUT" name="logout" /></a>';
+                  //echo '<a href="logout.php"><< LOGOUT</a>';
+                  echo "<h4>Welcome ".$_SESSION['user'].'! You are logged in.</h4>';
+               ?>
+            </header>
+         </div> 
+      </div>      
+   <section>
       	
-      <div class="row table-responsive">
-         <div class="col-sm-12 mx-auto d-block">
+      <div class="row">
+                
+         <div class="col-sm-12 col-md-12 mx-auto d-block">
+            
                <h2>TABLE TEAMS EDITOR</h2>
                <br>
             
@@ -50,7 +52,7 @@
                      $sqlQuery = "SELECT team_id as NO, team_name as TEAM, played as PLAYED, lost as LOST, won as WON, points as POINTS FROM `teams`";
                      $resultSet = mysqli_query($conn, $sqlQuery) or die("database error:". mysqli_error($conn));
                      ?>
-               <table id="tabela" class="table table-bordered">
+               <table id="tabela" class="table table-responsive table-bordered">
                         <thead>
                            <tr>
                               <th>No</th>
@@ -118,17 +120,17 @@
                   <hr>
                            </div>     
          </div>
-         <div class="row table-responsive">
+         <div class="row">
             <h2>TABLE MATCHES EDITOR</h2>
             <br>
-            <?php
-            
-               include_once("config.php");
-               $conn = new mysqli('10.16.16.17','werr-8ec-u-240701','mario71','werr-8ec-u-240701');
-               $sqlQuery = "SELECT match_id as ID, match_date as MATCH_DATE,team1_name as HOME_TEAM,team2_name as GUEST_TEAM,team1_score as HT_SCORE,team2_score as GT_SCORE FROM matches";
-               $resultSet = mysqli_query($conn, $sqlQuery) or die("database error:". mysqli_error($conn));
+            <div class="col-sm-12 col-md-12 mx-auto d-block">
+               <?php
+                include_once("config.php");
+                $conn = new mysqli('10.16.16.17','werr-8ec-u-240701','mario71','werr-8ec-u-240701');
+                $sqlQuery = "SELECT match_id as ID, match_date as MATCH_DATE,team1_name as HOME_TEAM,team2_name as GUEST_TEAM,team1_score as HT_SCORE,team2_score as GT_SCORE FROM matches";
+                $resultSet = mysqli_query($conn, $sqlQuery) or die("database error:". mysqli_error($conn));
                ?>
-               <table id="tabela" class="table table-bordered">
+               <table id="tabela" class="table table-responsive table-bordered">
                   <thead>
                      <tr>
                         <th>ID</th>
@@ -176,7 +178,7 @@
                         
                         <td><input type="submit" value="Delete Record" name="deleteButton"/></td>
                         <td><input id="match_id" type="text" name="match_id"/> </td> 
-                        <td><label for="id">&larr; Input Record No To Delete</label></td> 					 
+                        <td><label for="id">&larr; ID To Delete</label></td> 					 
                         <td><label for="id"></label></td>
                         <td><label for="id"></label></td>
                         <td><label for="id"></label></td>
@@ -186,7 +188,7 @@
                      <form action="peterborough-volleyball-change-number" method="post">
                         <td><input type="submit" value="Change Record No " name="changeButton"/></td>
                         <td><input id="match_id" type="text" name="match_id"/> </td> 
-                        <td><label for="match_id">&larr; Number to Change &nbsp; | &nbsp;  New No &rarr;</label> 	</td> 
+                        <td><label for="match_id">&larr; Old ID &nbsp; | &nbsp;  New ID &rarr;</label> 	</td> 
                         <td><input id="new_match_id" type="text" name="new_match_id"/> </td> 					 
                         <td><label for="id"></label></td>
                         <td><label for="id"></label></td>
@@ -195,6 +197,7 @@
                </table>
                
                <hr>
+            </div>   
          </div>
       
    </section>
