@@ -177,6 +177,11 @@ header .header-text {
   margin: 0;
   text-align: justify;
 }
+@media (max-width: 768px) {
+  #about-content {
+    font-size: 16px;
+  }
+}
 @media only screen and (max-width: 767px) {
   .about h1 {
     font-size: 1.5rem;
@@ -186,9 +191,7 @@ header .header-text {
   max-width: 100%;
   height: auto;
 }
-col-sm-12 col-md-10 col-xl-9 mx-auto d-block {
-  text-align: left;
-}
+
 /****** league Section ******/
 .league {
   -webkit-font-smoothing: antialiased;

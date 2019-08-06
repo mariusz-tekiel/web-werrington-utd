@@ -138,7 +138,7 @@
   <!-- About Club -->
   <section class="about" id="about">
       <div class="container">
-        <div class="row"> 
+        <div class="row" id="about-content"> 
           <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">
             <br>
               <h2>CLUB</h2>
