@@ -11,6 +11,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
 	<link rel="stylesheet" href="css/login.css">
 	<title>Login to werrington utd</title>
 </head>
@@ -23,12 +24,8 @@
 					<input type="submit" value="Return" name="return"/>
 				</form>	
 				<div class="login-window">
-					<a href="rejestracja.php" class="not-active">Registration - create free account!</a>
-					<br />
-					<h3>Registration only for members of club! </h3>
-					<br>
-					<br>
-					
+					<a href="rejestracja.php" class="not-active">Registration - only for club members!</a>
+					<br />												
 					<form action="peterborough-volleyball-club-players" method="post">
 					
 						<label for="">Login:</label> <br /> <input type="text" name="login" /> <br />
