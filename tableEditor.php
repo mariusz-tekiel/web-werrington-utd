@@ -120,10 +120,10 @@
                   <hr>
                            </div>     
          </div>
-         <div class="row">
-            <h2>TABLE MATCHES EDITOR</h2>
-            <br>
+         <div class="row">            
             <div class="col-sm-12 col-md-12 mx-auto d-block">
+               <h2>TABLE MATCHES EDITOR</h2>
+            <br>
                <?php
                 include_once("config.php");
                 $conn = new mysqli('10.16.16.17','werr-8ec-u-240701','mario71','werr-8ec-u-240701');
