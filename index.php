@@ -5,11 +5,10 @@
   <meta charset="utf-8">
   <title>Werrington United Volleyball Club</title>
   <meta http-equiv="x-ua-compatible" content="ie=edge"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, shrink-to-fit=no, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
   <meta name="google" content="notranslate">
   <meta name="description"
-    content="Volleyball sport club located in Peterborough. It is gethering half-professional players and fans of this disciplines. ">
+    content="Volleyball Club located in Peterborough. It is gethering half-professional players and fans of this discipline. ">
   <meta name="keywords" content="volleyball, ball, Peterborugh, Werrington, Utd, sport, volleyball peach, club, league">
   <meta name="theme-color" content="#fff">
 
@@ -148,9 +147,11 @@
                   form of spending free time. In 2014, Werrington Utd VC played for the first time in Cambridgeshire
                   League game.</p>
                   <p>For several years, the team played in league games with smaller or larger successes.
-                  From time to time, the team struggled with staff shortages. The worst time is the holiday season, when some people leave for holidays. In general, the composition of the team has changed many times.
-                  The team has a fanpage on facebook where you can find photos of the team and additional information about it.
-                  In the summertime club organizes outdoor happenings. We warmly invite you all!</p>  
+                  From time to time, the team struggled with staff shortages. The worst time is the holiday season, when some people leave for holidays. In general, the composition of the team has changed many times.</p>
+                  <p>The team has a <a href="https://www.facebook.com/werrington.united/">facebook fanpage </a> where you can find photos of the team and additional information about it.
+                  In the summertime club organizes outdoor happenings. We warmly invite you all!</p> 
+                  <p>Any question please address to werrington.united@gmail.com</p>
+                  
                  <!-- <figure>
                     <img src="img/club-sec/werrington-centre.jpg" class="img-fluid" alt="Responsive-image">
                    <figcaption>First base of Werrington United Team</figcaption>
