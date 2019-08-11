@@ -5,8 +5,7 @@
   <meta charset="utf-8">
   <title>Werrington United Volleyball Club</title>
   <meta http-equiv="x-ua-compatible" content="ie=edge"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, shrink-to-fit=no, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
   <meta name="google" content="notranslate">
   <meta name="description"
     content="Volleyball sport club located in Peterborough. It is gethering half-professional players and fans of this disciplines. ">
