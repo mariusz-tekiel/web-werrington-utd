@@ -8,7 +8,7 @@
   <meta name="viewport" content="user-scalable=no, initial-scale=1, shrink-to-fit=no, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
   <meta name="google" content="notranslate">
   <meta name="description"
-    content="Volleyball Club located in Peterborough. It is gethering half-professional players and fans of this discipline. ">
+    content="Werrington United is a Volleyball Club playing in Peterborough. It is gethering half-professional players and fans of this discipline. ">
   <meta name="keywords" content="volleyball, ball, Peterborugh, Werrington, Utd, sport, volleyball peach, club, league">
   <meta name="theme-color" content="#fff">
 
@@ -20,8 +20,7 @@
   <meta property="og:description" content="Volleyball Team" />
   <meta property="og:site_name" content="Werrington Utd" />
 
-  
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="img/favicon/favicon-16.png" sizes="16x16" type="image/png">
   <link rel="icon" href="img/favicon/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="img/favicon/favicon-48.png" sizes="48x48" type="image/png">
@@ -51,6 +50,7 @@
 </head>
 
 <body>
+  <main>
   <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser.
         Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your
@@ -150,7 +150,8 @@
                   From time to time, the team struggled with staff shortages. The worst time is the holiday season, when some people leave for holidays. In general, the composition of the team has changed many times.</p>
                   <p>The team has a <a href="https://www.facebook.com/werrington.united/">facebook fanpage </a> where you can find photos of the team and additional information about it.
                   In the summertime club organizes outdoor happenings. We warmly invite you all!</p> 
-                  <p>Any question please address to werrington.united@gmail.com</p>
+                  <p>Any question please address to <a target="_blank" href="mailto:werrington.united@gmail.com">
+                                    werrington.united@gmail.com </a></p>
                   
                  <!-- <figure>
                     <img src="img/club-sec/werrington-centre.jpg" class="img-fluid" alt="Responsive-image">
@@ -250,7 +251,8 @@
         </div>          
       </div>          
    </div>          
-</section>          
+</section>    
+</main>      
   <!-- Footer row -->
   <footer id="contact">
     <div class="container">
