@@ -125,7 +125,7 @@ $(function() {
 
   function setBackgroundColorOnClick() {
     $(".navbar-toggler").on("click", function() {
-      document.getElementById("navbar").style.background = "#fff";
+      document.getElementById("navbar").style.background = "#092c44ab";
     });
   }
 });
