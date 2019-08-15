@@ -3,6 +3,7 @@ body {
   background-color: rgb(16, 11, 61);
   width: 100%;
 }
+
 #welcome {
   color: white;
 }
@@ -64,7 +65,10 @@ a {
 h2 {
   text-align: center;
   color: grey;
+  font-size: 20px;
+  font-weight: bold;
 }
+
 h4 {
   font-size: 16px;
   color: rgb(245, 228, 76);
