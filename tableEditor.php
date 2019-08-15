@@ -24,14 +24,14 @@
 
 <body>
 <main> 
-<div class="container">
+<div class="container" id="tableEditor">
       <div  class="row">    
          <div class="col-sm-12" id="welcome">
             <header>
                <?php
                   echo '<a href="logout.php"><input type="submit" value="LOGOUT" name="logout" /></a>';
                   //echo '<a href="logout.php"><< LOGOUT</a>';
-                  echo "<h4>Welcome ".$_SESSION['user'].'! You are logged in.</h4>';
+                  //echo "<h4>Welcome ".$_SESSION['user'].'! You are logged in.</h4>';
                ?>
             </header>
          </div> 
