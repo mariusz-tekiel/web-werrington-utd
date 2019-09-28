@@ -48,7 +48,7 @@
                <?php
                   
                      include_once("config.php");
-                     $conn = new mysqli('10.16.16.17','werr-8ec-u-240701','mario71','werr-8ec-u-240701');
+                     $conn = new mysqli('localhost','mmaximus_werr','Mario$71','mmaximus_werr');
                      $sqlQuery = "SELECT team_id as NO, team_name as TEAM, played as PLAYED, won as WON, lost as LOST, points as POINTS FROM `teams`";
                      $resultSet = mysqli_query($conn, $sqlQuery) or die("database error:". mysqli_error($conn));
                      ?>
@@ -126,7 +126,7 @@
             <br>
                <?php
                 include_once("config.php");
-                $conn = new mysqli('10.16.16.17','werr-8ec-u-240701','mario71','werr-8ec-u-240701');
+                $conn = new mysqli('localhost','mmaximus_werr','Mario$71','mmaximus_werr');
                 $sqlQuery = "SELECT match_id as ID, match_date as MATCH_DATE,team1_name as HOME_TEAM,team2_name as GUEST_TEAM,team1_score as HT_SCORE,team2_score as GT_SCORE FROM matches";
                 $resultSet = mysqli_query($conn, $sqlQuery) or die("database error:". mysqli_error($conn));
                ?>
