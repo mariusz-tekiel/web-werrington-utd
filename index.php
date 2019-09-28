@@ -173,7 +173,8 @@
           <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">
               <?php
               try {
-                  $con= new PDO('mysql:host=10.16.16.17;dbname=werr-8ec-u-240701', 'werr-8ec-u-240701', 'mario71');
+                  //$con= new PDO('mysql:host=10.16.16.17;dbname=werr-8ec-u-240701', 'werr-8ec-u-240701', 'mario71');
+                  $con= new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
                   $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                   $query = "SELECT team_id as NO, team_name as TEAM, played as PLAYED, won as WON, lost as LOST, points as POINTS FROM `teams`";
                 //first pass just gets the column names
@@ -218,7 +219,8 @@
             
             <?php
             try {
-                $con= new PDO('mysql:host=10.16.16.17;dbname=werr-8ec-u-240701', 'werr-8ec-u-240701', 'mario71');
+                //$con= new PDO('mysql:host=10.16.16.17;dbname=werr-8ec-u-240701', 'werr-8ec-u-240701', 'mario71');
+                $con= new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
                 $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $query = "SELECT match_date as MATCH_DATE,team1_name as HOME_TEAM,team2_name as GUEST_TEAM,team1_score as HT_SCORE,team2_score as GT_SCORE FROM matches";
               //first pass just gets the column names
