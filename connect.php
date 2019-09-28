@@ -11,5 +11,5 @@
 	$host = "s8.linuxpl.com";
 	$db_user = "mmaximus_werr";
 	$db_password = "Mario$71";
-	$db_name = "werr";
+	$db_name = "mmaximus_werr";
 ?>
