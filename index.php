@@ -173,7 +173,7 @@
           <div class="col-sm-12 col-md-10 col-xl-9 mx-auto d-block">
               <?php
               try {
-                  $con= new PDO('mysql:host=s8.linuxpl.com;dbname=mmaximus_werr', 'mmaximus_werr', 'Mario$71');
+                  $con= new PDO('mysql:host=localhost;dbname=mmaximus_werr', 'mmaximus_werr', 'Mario$71');
                   //$con= new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
                   $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                   $query = "SELECT team_id as NO, team_name as TEAM, played as PLAYED, won as WON, lost as LOST, points as POINTS FROM `teams`";
@@ -219,7 +219,7 @@
             
             <?php
             try {
-                $con= new PDO('mysql:host=s8.linuxpl.com;dbname=mmaximus_werr', 'mmaximus_werr', 'Mario$71');
+                $con= new PDO('mysql:host=localhost;dbname=mmaximus_werr', 'mmaximus_werr', 'Mario$71');
                 //$con= new PDO('mysql:host=localhost;dbname=werrington', 'root', '');
                 
                 $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

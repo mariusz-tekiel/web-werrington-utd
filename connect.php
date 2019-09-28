@@ -4,7 +4,7 @@
 	$db_password = "";
 	$db_name = "werrington";*/
 
-	$host = "s8.linuxpl.com";
+	$host = "195.78.66.4";
 	$db_user = "mmaximus_werr";
 	$db_password = "Mario$71";
 	$db_name = "mmaximus_werr";
