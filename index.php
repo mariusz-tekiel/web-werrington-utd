@@ -19,14 +19,16 @@
   
   <meta property="og:description" content="Volleyball Team" />
   <meta property="og:site_name" content="Werrington Utd" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="icon" href="img/favicon/favicon-16.png" sizes="16x16" type="image/png">
-  <link rel="icon" href="img/favicon/favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="img/favicon/favicon-48.png" sizes="48x48" type="image/png">
-  <link rel="icon" href="img/favicon/favicon-62.png" sizes="62x62" type="image/png">
-  <link rel="icon" href="img/favicon/favicon-192.png" sizes="192x192" type="image/png">
 
+ 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
