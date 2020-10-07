@@ -174,7 +174,7 @@
               <?php
               try {
                  // $con= new PDO('mysql:host=10.16.16.17;dbname=werr-8ec-u-240701', 'werr-8ec-u-240701', 'mario71');
-                 $con= new PDO('mysql:host=s8.linuxpl.com;dbname=mmaximus_werr', 'mmaximus_werr', 'Mario$71');
+                 $con= new PDO('mysql:host=db5001003998.hosting-data.io;dbname=dbs869787', 'dbu1065015', 'Mario$71');
                  //$con= new PDO('mysql:host="localhost";dbname="werrington"', '', 'root');
                  
                   $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -224,7 +224,7 @@
                 //$con dla servera w sieci.
                // $con= new PDO('mysql:host=10.16.16.17;dbname=werr-8ec-u-240701', 'werr-8ec-u-240701', 'mario71');
                 //$con= new PDO('mysql:host="localhost";dbname="werrington"','', 'root');
-                $con= new PDO('mysql:host=s8.linuxpl.com;dbname=mmaximus_werr', 'mmaximus_werr', 'Mario$71');
+                $con= new PDO('mysql:host=db5001003998.hosting-data.io;dbname=dbs869787', 'dbu1065015', 'Mario$71');
 
                 $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $query = "SELECT match_date as MATCH_DATE,team1_name as HOME_TEAM,team2_name as GUEST_TEAM,team1_score as HT_SCORE,team2_score as GT_SCORE FROM matches";

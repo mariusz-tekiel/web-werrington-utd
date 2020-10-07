@@ -1,7 +1,8 @@
 <?php
 	session_start();
 	$_SESSION['zalogowany']=false;
-	if((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true)){
+	if((isset($_SESSION['zalogowany'])) && ($_SESSION['zalogowany']==true))
+	{
 		header('Location: peterborough-volleyball-database');
 		exit();
 	}
